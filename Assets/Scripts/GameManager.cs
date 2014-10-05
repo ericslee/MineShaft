@@ -29,9 +29,9 @@ public class GameManager : MonoBehaviour {
 	
 	void SetUpLevel() 
     {
-		Instantiate(groundPrefab, new Vector3(0f, -3f, 0f), Quaternion.identity);
+		Instantiate(groundPrefab, new Vector3(0f, -7f, 0f), Quaternion.identity);
    
-		Instantiate(platformPrefab, new Vector3(-2f, 1.8f, 0f), Quaternion.identity);
+		Instantiate(platformPrefab, new Vector3(-2f, 0.2f, 0f), Quaternion.identity);
 	}
 	
 	// Update is called once per frame
