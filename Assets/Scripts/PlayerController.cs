@@ -17,7 +17,7 @@ public class PlayerController : MonoBehaviour {
 	// Update is called once per frame
 	void Update() 
     {
-		HandleMovement();
+        HandleMovement();
 	}
 
 	void HandleMovement() 
@@ -40,9 +40,15 @@ public class PlayerController : MonoBehaviour {
 		}
 	}
 
+    // checks if player is grounded with three tiny raycasts from the left bound, center, and right bound of the collider
 	bool IsGrounded() 
     {
-		return Physics.Raycast(transform.position, -Vector3.up, distToGround + 0.1f);
+        Vector3 leftBound = new Vector3(transform.position.x - (GetComponent<BoxCollider>().size.x / 2), transform.position.y, transform.position.z);
+        Vector3 rightBound = new Vector3(transform.position.x + (GetComponent<BoxCollider>().size.x / 2), transform.position.y, transform.position.z);
+
+		return (Physics.Raycast(transform.position, -Vector3.up, distToGround + 0.1f)
+                || (Physics.Raycast(leftBound, -Vector3.up, distToGround + 0.1f))
+                || (Physics.Raycast(rightBound, -Vector3.up, distToGround + 0.1f)));
 	}
 
 	void OnCollisionEnter(Collision collision) 
