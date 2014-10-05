@@ -14,7 +14,8 @@ public class GameManager : MonoBehaviour {
 	Object groundPrefab;
 
 	// Use this for initialization
-	void Start () {
+	void Start () 
+    {
 		// Cache references
 		playerPrefab = Resources.Load("Prefabs/Player");
 		platformPrefab = Resources.Load("Prefabs/Platform");
@@ -26,14 +27,16 @@ public class GameManager : MonoBehaviour {
 		SetUpLevel();
 	}
 	
-	void SetUpLevel() {
+	void SetUpLevel() 
+    {
 		Instantiate(groundPrefab, new Vector3(0f, -3f, 0f), Quaternion.identity);
-
-		Instantiate(platformPrefab, new Vector3(-2f, 2f, 0f), Quaternion.identity);
+   
+		Instantiate(platformPrefab, new Vector3(-2f, 1.8f, 0f), Quaternion.identity);
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update () 
+    {
 	
 	}
 }
