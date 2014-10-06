@@ -9,6 +9,7 @@ public class LevelControl : MonoBehaviour
 
     // level control
     int correspondingLevel; // level that the game should switch to when this threshold is crossed
+    Vector3 cameraPosition;
 
     GameManager gameManager;
 
@@ -29,8 +30,7 @@ public class LevelControl : MonoBehaviour
     {
         if (correspondingLevel != gameManager.GetCurrentLevel() && other.tag.Equals("Player"))
         {
-            // increment the level if entering from below
-            gameManager.ChangeLevel(correspondingLevel);
+            gameManager.ChangeLevel(correspondingLevel, cameraPosition);
         }
     }
 
@@ -41,5 +41,10 @@ public class LevelControl : MonoBehaviour
     public void SetCorrespondingLevel(int level)
     {
         correspondingLevel = level;
+    }
+
+    public void SetCameraPosition(Vector3 cameraPos)
+    {
+        cameraPosition = cameraPos;
     }
 }

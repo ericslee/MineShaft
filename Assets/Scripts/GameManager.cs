@@ -12,9 +12,7 @@ public class GameManager : MonoBehaviour
     // Player
     GameObject player;
 
-    // Camera positions for each level (level - 1 is the index)
-    List<Vector3> cameraPositions = new List<Vector3>();
-    // list of level triggers
+    // list of level triggers, (level - 1 is the index)
     List<GameObject> levelTriggers = new List<GameObject>();
 
     // Prefabs
@@ -39,7 +37,6 @@ public class GameManager : MonoBehaviour
         currentLevel = 1;
 
         SetUpLevel();
-        AddCameraPositions();
     }
     
     void SetUpLevel()
@@ -64,20 +61,15 @@ public class GameManager : MonoBehaviour
         levelTriggers.Add((GameObject)Instantiate(newLevelTriggerPrefab, new Vector3(5f, 25f, 0f), Quaternion.identity));
         levelTriggers.Add((GameObject)Instantiate(newLevelTriggerPrefab, new Vector3(5f, 29f, 0f), Quaternion.identity));
         levelTriggers[0].GetComponent<LevelControl>().SetCorrespondingLevel(1);
+        levelTriggers[0].GetComponent<LevelControl>().SetCameraPosition(new Vector3(0f, 12f, -30f));
         levelTriggers[1].GetComponent<LevelControl>().SetCorrespondingLevel(2);
+        levelTriggers[1].GetComponent<LevelControl>().SetCameraPosition(new Vector3(0f, 40f, -30f));
 
         ///////////////////// Second level /////////////////////
         Instantiate(platformPrefab, new Vector3(-2f, 30f, 0f), Quaternion.identity);
         Instantiate(platformPrefab, new Vector3(5f, 33f, 0f), Quaternion.identity);
         Instantiate(platformPrefab, new Vector3(-2f, 36f, 0f), Quaternion.identity);
         Instantiate(platformPrefab, new Vector3(5f, 39f, 0f), Quaternion.identity);
-    }
-
-    void AddCameraPositions() 
-    {
-        // for each level
-        cameraPositions.Add(new Vector3(0f, 12f, -30f));
-        cameraPositions.Add(new Vector3(0f, 40f, -30f));
     }
     
     // Update is called once per frame
@@ -86,12 +78,12 @@ public class GameManager : MonoBehaviour
     
     }
 
-    public void ChangeLevel(int level) 
+    public void ChangeLevel(int level, Vector3 cameraPos) 
     {
         currentLevel = level;
 
         // move camera
-        iTween.MoveTo(Camera.main.gameObject, cameraPositions[currentLevel - 1], 1.0f);
+        iTween.MoveTo(Camera.main.gameObject, cameraPos, 1.0f);
     }
 
     /*
