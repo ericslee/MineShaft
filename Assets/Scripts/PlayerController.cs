@@ -44,6 +44,12 @@ public class PlayerController : MonoBehaviour
                 rigidbody.velocity = new Vector3(0, 8, 0);
             }
         }
+
+        // FOR DEBUGGING, multi jump
+        if (Input.GetKey(KeyCode.U))
+        {
+            rigidbody.velocity = new Vector3(0, 8, 0);
+        }
     }
 
     // checks if player is grounded with three tiny raycasts from the left bound, center, and right bound of the collider

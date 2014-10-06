@@ -22,6 +22,9 @@ public class GameManager : MonoBehaviour
     Object wallPrefab;
     Object newLevelTriggerPrefab;
 
+    // references
+    GameHUD hud;
+
     // Use this for initialization
     void Start()
     {
@@ -31,6 +34,7 @@ public class GameManager : MonoBehaviour
         groundPrefab = Resources.Load("Prefabs/Ground");
         wallPrefab = Resources.Load("Prefabs/Wall");
         newLevelTriggerPrefab = Resources.Load("Prefabs/NewLevelTrigger");
+        hud = GetComponent<GameHUD>();
 
         // Instantiate player at start of level 1
         player = (GameObject)Instantiate(playerPrefab);
@@ -70,6 +74,12 @@ public class GameManager : MonoBehaviour
         Instantiate(platformPrefab, new Vector3(5f, 33f, 0f), Quaternion.identity);
         Instantiate(platformPrefab, new Vector3(-2f, 36f, 0f), Quaternion.identity);
         Instantiate(platformPrefab, new Vector3(5f, 39f, 0f), Quaternion.identity);
+        Instantiate(platformPrefab, new Vector3(-2f, 42f, 0f), Quaternion.identity);
+        Instantiate(platformPrefab, new Vector3(5f, 45f, 0f), Quaternion.identity);
+
+        ///////////////////// Winning trigger /////////////////////
+        levelTriggers.Add((GameObject)Instantiate(newLevelTriggerPrefab, new Vector3(5f, 48f, 0f), Quaternion.identity));
+        levelTriggers[2].GetComponent<LevelControl>().SetIsWinningTrigger(true);
     }
     
     // Update is called once per frame
@@ -84,6 +94,15 @@ public class GameManager : MonoBehaviour
 
         // move camera
         iTween.MoveTo(Camera.main.gameObject, cameraPos, 1.0f);
+    }
+
+    public void Win()
+    {
+        // winning sequence
+        if (hud != null) 
+        {
+            hud.Win();
+        }
     }
 
     /*

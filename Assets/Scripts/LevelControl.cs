@@ -10,7 +10,7 @@ public class LevelControl : MonoBehaviour
     // level control
     int correspondingLevel; // level that the game should switch to when this threshold is crossed
     Vector3 cameraPosition;
-
+    bool isWinningTrigger = false;
     GameManager gameManager;
 
     // Use this for initialization
@@ -30,7 +30,13 @@ public class LevelControl : MonoBehaviour
     {
         if (correspondingLevel != gameManager.GetCurrentLevel() && other.tag.Equals("Player"))
         {
-            gameManager.ChangeLevel(correspondingLevel, cameraPosition);
+            if (isWinningTrigger)
+            {
+                gameManager.Win();
+            } else
+            {         
+                gameManager.ChangeLevel(correspondingLevel, cameraPosition);
+            }
         }
     }
 
@@ -46,5 +52,10 @@ public class LevelControl : MonoBehaviour
     public void SetCameraPosition(Vector3 cameraPos)
     {
         cameraPosition = cameraPos;
+    }
+
+    public void SetIsWinningTrigger(bool isWin)
+    {
+        isWinningTrigger = isWin;
     }
 }
