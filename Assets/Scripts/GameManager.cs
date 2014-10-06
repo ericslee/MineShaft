@@ -1,13 +1,19 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 // This script will be used to manage the global game state
 
 public class GameManager : MonoBehaviour
 {
+    // Game state
+    int currentLevel;
 
     // Player
     GameObject player;
+
+    // Camera positions for each level (level - 1 is the index)
+    List<Vector3> cameraPositions = new List<Vector3>();
 
     // Prefabs
     Object playerPrefab;
@@ -26,6 +32,7 @@ public class GameManager : MonoBehaviour
 
         // Instantiate player at start of level 1
         player = (GameObject)Instantiate(playerPrefab);
+        currentLevel = 1;
 
         SetUpLevel();
     }
@@ -49,7 +56,17 @@ public class GameManager : MonoBehaviour
         Instantiate(platformPrefab, new Vector3(5f, 27f, 0f), Quaternion.identity);
 
         ///////////////////// Second level /////////////////////
+        Instantiate(platformPrefab, new Vector3(-2f, 30f, 0f), Quaternion.identity);
+        Instantiate(platformPrefab, new Vector3(5f, 33f, 0f), Quaternion.identity);
+        Instantiate(platformPrefab, new Vector3(-2f, 36f, 0f), Quaternion.identity);
+        Instantiate(platformPrefab, new Vector3(5f, 39f, 0f), Quaternion.identity);
+    }
 
+    void AddCameraPositions() 
+    {
+        // for each level
+        cameraPositions.Add(new Vector3(0f, 12f, -30f));
+        cameraPositions.Add(new Vector3(0f, 24f, -30f));
     }
     
     // Update is called once per frame
