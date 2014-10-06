@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class WinScript : MonoBehaviour {
+public class LoseScript : MonoBehaviour {
 	
 	private GUIStyle buttonStyle; 
 	// Use this for initialization 

@@ -3,7 +3,7 @@ using System.Collections;
 
 // found from http://gamedesigntheory.blogspot.ie/2010/09/controlling-aspect-ratio-in-unity.html
 
-public class CameraAspectRatioControl : MonoBehaviour {
+public class CameraControl : MonoBehaviour {
 
     // Use this for initialization
     void Start () 
@@ -48,5 +48,10 @@ public class CameraAspectRatioControl : MonoBehaviour {
             
             camera.rect = rect;
         }
+    }
+
+    void Update()
+    {
+
     }
 }
