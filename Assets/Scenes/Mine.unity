@@ -124,7 +124,6 @@ GameObject:
   - 20: {fileID: 203148095}
   - 92: {fileID: 203148094}
   - 124: {fileID: 203148093}
-  - 81: {fileID: 203148092}
   m_Layer: 0
   m_Name: Black Camera
   m_TagString: Untagged
@@ -132,13 +131,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &203148092
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 203148091}
-  m_Enabled: 1
 --- !u!124 &203148093
 Behaviour:
   m_ObjectHideFlags: 0
