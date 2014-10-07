@@ -26,6 +26,15 @@ public class GameHUD : MonoBehaviour
     {
         GUI.Label(new Rect(10, 5, Screen.width / 5, Screen.height / 25), "Current Level: " + gameManager.GetCurrentLevel());
 
+        // Instructions
+        GUI.Label(new Rect(10, 40, Screen.width / 5, Screen.height / 2), "Controls - \nLeft+right arrows: movement" +
+            "\n\nSpace: jump" +
+            "\n\nLeft-shift: toggle shooting mode" +
+            "\n\nIn shooting mode -" +
+            "\nArrow keys: aim" +
+            "\n\nSpace: fire platform");
+
+        // Win/loss
         if (hasPlayerWon)
         {
             GUI.Label(new Rect(Screen.width / 2 - Screen.width / 8, Screen.height / 2, Screen.width / 4, Screen.height / 3), "You escaped the mine!");
