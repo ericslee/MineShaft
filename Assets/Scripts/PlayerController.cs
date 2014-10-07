@@ -8,9 +8,22 @@ public class PlayerController : MonoBehaviour
     float distToGround;
     bool collidingWall; // used for disabling left, right controls when colliding with a wall
 
+    // Gun controls
+    bool shootingMode = false;
+    GameObject targetingReticle;
+    Object targetingReticlePrefab;
+
+    // Platform gun
+    Object platformPrefab;
+    GameObject currentActivePlatform;
+
     // Use this for initialization
     void Start()
     {
+        // cache references
+        platformPrefab = Resources.Load("Prefabs/Platform");
+        targetingReticlePrefab = Resources.Load("Prefabs/Reticle");
+
         // get distance to ground
         distToGround = collider.bounds.extents.y;
     }
@@ -18,30 +31,58 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        HandleMovement();
+        HandleInput();
     }
 
-    void HandleMovement()
+    void HandleInput()
     {
-        if (!collidingWall)
+        // Switch into shooting mode
+        if (Input.GetKeyDown(KeyCode.LeftShift)) 
         {
-            if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
+            shootingMode = !shootingMode;
+            HandleReticle();
+        }
+
+        if (!shootingMode)
+        {
+            if (!collidingWall)
             {
-                transform.Translate(Vector2.right * 4f * Time.deltaTime);
+                if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
+                {
+                    transform.Translate(Vector2.right * 4f * Time.deltaTime);
+                }
+                if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
+                {
+                    transform.Translate(-Vector2.right * 4f * Time.deltaTime);
+                }
             }
-            if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
+
+            // Jump
+            if (IsGrounded())
             {
-                transform.Translate(-Vector2.right * 4f * Time.deltaTime);
+                collidingWall = false;
+                if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow))
+                {
+                    rigidbody.velocity = new Vector3(0, 8, 0);
+                }
             }
         }
 
-        // Jump
-        if (IsGrounded())
+        if (shootingMode && targetingReticle) 
         {
-            collidingWall = false;
-            if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow))
+            if (Input.GetKeyDown(KeyCode.Space))
             {
-                rigidbody.velocity = new Vector3(0, 8, 0);
+                // create platform at the location of the targeting reticle
+                if (currentActivePlatform)
+                {
+                    Destroy(currentActivePlatform);
+                }
+
+                currentActivePlatform = (GameObject)Instantiate(platformPrefab, targetingReticle.transform.position, Quaternion.identity);
+
+                // exit out of shooting mode
+                shootingMode = false;
+                HandleReticle();
             }
         }
 
@@ -61,6 +102,24 @@ public class PlayerController : MonoBehaviour
         return (Physics.Raycast(transform.position, -Vector3.up, distToGround + 0.1f)
             || (Physics.Raycast(leftBound, -Vector3.up, distToGround + 0.1f))
             || (Physics.Raycast(rightBound, -Vector3.up, distToGround + 0.1f)));
+    }
+
+    void HandleReticle() 
+    {
+        if (shootingMode) 
+        {
+            // create reticle
+            //TODO: instantiate reticle position relative to which way the character is facing
+            Vector3 reticlePosition = new Vector3(transform.position.x + 4f, transform.position.y + 3, transform.position.z);
+            targetingReticle = (GameObject)Instantiate(targetingReticlePrefab, reticlePosition, Quaternion.Euler(90, 0, 0));
+        } else 
+        {
+            // destroy reticle
+            if (targetingReticle)
+            {
+                Destroy(targetingReticle);
+            }
+        }
     }
 
     void OnCollisionEnter(Collision collision)
