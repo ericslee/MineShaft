@@ -32,7 +32,8 @@ public class GameHUD : MonoBehaviour
             "\n\nLeft-shift: toggle shooting mode" +
             "\n\nIn shooting mode -" +
             "\nArrow keys: aim" +
-            "\n\nSpace: fire platform");
+            "\n\nSpace: fire platform" +
+            "\n\nU: fly in DEBUG");
 
         // Win/loss
         if (hasPlayerWon)

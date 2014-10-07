@@ -22,6 +22,7 @@ public class GameManager : MonoBehaviour
     Object wallPrefab;
     Object newLevelTriggerPrefab;
     Object fogPrefab;
+    Object backdropPrefab;
 
     // references
     GameHUD hud;
@@ -36,6 +37,7 @@ public class GameManager : MonoBehaviour
         wallPrefab = Resources.Load("Prefabs/Wall");
         newLevelTriggerPrefab = Resources.Load("Prefabs/NewLevelTrigger");
         fogPrefab = Resources.Load("Prefabs/Fog");
+        backdropPrefab = Resources.Load("Prefabs/Backdrop");
         hud = GetComponent<GameHUD>();
 
         // Instantiate player at start of level 1
@@ -64,6 +66,9 @@ public class GameManager : MonoBehaviour
         Instantiate(platformPrefab, new Vector3(5f, 21f, 0f), Quaternion.identity);
         Instantiate(platformPrefab, new Vector3(-2f, 24f, 0f), Quaternion.identity);
         Instantiate(platformPrefab, new Vector3(5f, 27f, 0f), Quaternion.identity);
+
+        Instantiate(backdropPrefab, new Vector3(0, 0, 0.5f), Quaternion.Euler(270, 0, 0));
+        Instantiate(backdropPrefab, new Vector3(0, 29, 0.5f), Quaternion.Euler(270, 0, 0));
 
         // level change triggers
         levelTriggers.Add((GameObject)Instantiate(newLevelTriggerPrefab, new Vector3(5f, 25f, 0f), Quaternion.identity));
