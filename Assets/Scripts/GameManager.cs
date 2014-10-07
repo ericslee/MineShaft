@@ -21,6 +21,7 @@ public class GameManager : MonoBehaviour
     Object groundPrefab;
     Object wallPrefab;
     Object newLevelTriggerPrefab;
+    Object fogPrefab;
 
     // references
     GameHUD hud;
@@ -34,6 +35,7 @@ public class GameManager : MonoBehaviour
         groundPrefab = Resources.Load("Prefabs/Ground");
         wallPrefab = Resources.Load("Prefabs/Wall");
         newLevelTriggerPrefab = Resources.Load("Prefabs/NewLevelTrigger");
+        fogPrefab = Resources.Load("Prefabs/Fog");
         hud = GetComponent<GameHUD>();
 
         // Instantiate player at start of level 1
@@ -41,6 +43,8 @@ public class GameManager : MonoBehaviour
         currentLevel = 1;
 
         SetUpLevel();
+
+        CreateFog();
     }
     
     void SetUpLevel()
@@ -81,6 +85,11 @@ public class GameManager : MonoBehaviour
         levelTriggers.Add((GameObject)Instantiate(newLevelTriggerPrefab, new Vector3(5f, 48f, 0f), Quaternion.identity));
         levelTriggers[2].GetComponent<LevelControl>().SetIsWinningTrigger(true);
     }
+
+    void CreateFog()
+    {
+        Instantiate(fogPrefab, new Vector3(0f, -10f, 0f), Quaternion.identity);
+    }
     
     // Update is called once per frame
     void Update()
@@ -103,6 +112,12 @@ public class GameManager : MonoBehaviour
         {
             hud.Win();
         }
+    }
+
+    public void Lose()
+    {
+        // losing sequence
+        hud.Lose();
     }
 
     /*
