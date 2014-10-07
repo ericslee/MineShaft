@@ -82,8 +82,10 @@ public class GameManager : MonoBehaviour
         Instantiate(platformPrefab, new Vector3(5f, 45f, 0f), Quaternion.identity);
 
         ///////////////////// Winning trigger /////////////////////
-        levelTriggers.Add((GameObject)Instantiate(newLevelTriggerPrefab, new Vector3(5f, 48f, 0f), Quaternion.identity));
+        levelTriggers.Add((GameObject)Instantiate(newLevelTriggerPrefab, new Vector3(-41f, 49f, 0f), Quaternion.identity));
+        levelTriggers.Add((GameObject)Instantiate(newLevelTriggerPrefab, new Vector3(41f, 49f, 0f), Quaternion.identity));
         levelTriggers[2].GetComponent<LevelControl>().SetIsWinningTrigger(true);
+        levelTriggers[3].GetComponent<LevelControl>().SetIsWinningTrigger(true);
     }
 
     void CreateFog()
