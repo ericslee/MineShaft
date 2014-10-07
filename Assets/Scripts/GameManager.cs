@@ -56,11 +56,11 @@ public class GameManager : MonoBehaviour
 
         Instantiate(platformPrefab, new Vector3(-2f, 0.2f, 0f), Quaternion.identity);
         Instantiate(platformPrefab, new Vector3(5f, 3.5f, 0f), Quaternion.identity);
-        Instantiate(platformPrefab, new Vector3(-2f, 6f, 0f), Quaternion.identity);
+        //Instantiate(platformPrefab, new Vector3(-2f, 6f, 0f), Quaternion.identity);
         Instantiate(platformPrefab, new Vector3(5f, 9f, 0f), Quaternion.identity);
         Instantiate(platformPrefab, new Vector3(-2f, 12f, 0f), Quaternion.identity);
         Instantiate(platformPrefab, new Vector3(5f, 15f, 0f), Quaternion.identity);
-        Instantiate(platformPrefab, new Vector3(-2f, 18f, 0f), Quaternion.identity);
+        //Instantiate(platformPrefab, new Vector3(-2f, 18f, 0f), Quaternion.identity);
         Instantiate(platformPrefab, new Vector3(5f, 21f, 0f), Quaternion.identity);
         Instantiate(platformPrefab, new Vector3(-2f, 24f, 0f), Quaternion.identity);
         Instantiate(platformPrefab, new Vector3(5f, 27f, 0f), Quaternion.identity);
@@ -76,10 +76,10 @@ public class GameManager : MonoBehaviour
         ///////////////////// Second level /////////////////////
         Instantiate(platformPrefab, new Vector3(-2f, 30f, 0f), Quaternion.identity);
         Instantiate(platformPrefab, new Vector3(5f, 33f, 0f), Quaternion.identity);
-        Instantiate(platformPrefab, new Vector3(-2f, 36f, 0f), Quaternion.identity);
+        //Instantiate(platformPrefab, new Vector3(-2f, 36f, 0f), Quaternion.identity);
         Instantiate(platformPrefab, new Vector3(5f, 39f, 0f), Quaternion.identity);
         Instantiate(platformPrefab, new Vector3(-2f, 42f, 0f), Quaternion.identity);
-        Instantiate(platformPrefab, new Vector3(5f, 45f, 0f), Quaternion.identity);
+        //Instantiate(platformPrefab, new Vector3(5f, 45f, 0f), Quaternion.identity);
 
         ///////////////////// Winning trigger /////////////////////
         levelTriggers.Add((GameObject)Instantiate(newLevelTriggerPrefab, new Vector3(-41f, 49f, 0f), Quaternion.identity));
