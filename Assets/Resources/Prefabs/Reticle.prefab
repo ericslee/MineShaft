@@ -55,7 +55,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100002}
   m_LocalRotation: {x: 0, y: 0, z: -.707106829, w: .707106829}
-  m_LocalPosition: {x: 0, y: -0, z: -0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 20.6536522, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400000}
@@ -98,7 +98,7 @@ Light:
   m_Type: 2
   m_Color: {r: .279411793, g: 1, b: .968209326, a: 1}
   m_Intensity: 1
-  m_Range: 2.5
+  m_Range: .100000001
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
@@ -109,7 +109,7 @@ Light:
     m_Softness: 4
     m_SoftnessFade: 1
   m_Cookie: {fileID: 0}
-  m_DrawHalo: 0
+  m_DrawHalo: 1
   m_ActuallyLightmapped: 0
   m_Flare: {fileID: 0}
   m_RenderMode: 0
@@ -133,6 +133,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b980db1f342f4e44eb80a78aaef2a9c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  range: 0
 --- !u!136 &13600000
 CapsuleCollider:
   m_ObjectHideFlags: 1

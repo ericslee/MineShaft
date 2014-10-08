@@ -17,6 +17,8 @@ public class PlayerController : MonoBehaviour
     Object platformPrefab;
     GameObject currentActivePlatform;
 
+	int health;
+
     // Use this for initialization
     void Start()
     {
@@ -26,6 +28,8 @@ public class PlayerController : MonoBehaviour
 
         // get distance to ground
         distToGround = collider.bounds.extents.y;
+
+		health = 100;
     }
 
     // Update is called once per frame
@@ -78,7 +82,23 @@ public class PlayerController : MonoBehaviour
                     Destroy(currentActivePlatform);
                 }
 
-                currentActivePlatform = (GameObject)Instantiate(platformPrefab, targetingReticle.transform.position, Quaternion.identity);
+				Vector3 platformPosition = targetingReticle.transform.position;
+				float randomOffsetX = Random.value;
+				float randomOffsetY = Random.value;
+				Light[] lights = targetingReticle.GetComponentsInChildren<Light> ();
+				float range = 0;
+				if (lights.Length != 1){
+					Debug.Log("Error, targeting reticle should have exactly 1 light child");
+				}
+				else{
+					range = lights[0].range;
+				}
+				platformPosition.x += randomOffsetX*range;
+				platformPosition.y += randomOffsetY*range;
+
+                currentActivePlatform = 
+					(GameObject)Instantiate(platformPrefab, platformPosition, Quaternion.identity);
+
 
                 // exit out of shooting mode
                 shootingMode = false;
@@ -111,7 +131,7 @@ public class PlayerController : MonoBehaviour
             // create reticle
             //TODO: instantiate reticle position relative to which way the character is facing
             Vector3 reticlePosition = new Vector3(transform.position.x + 4f, transform.position.y + 3, transform.position.z);
-            targetingReticle = (GameObject)Instantiate(targetingReticlePrefab, reticlePosition, Quaternion.Euler(90, 0, 0));
+			targetingReticle = (GameObject)Instantiate(targetingReticlePrefab, reticlePosition, Quaternion.Euler(90, 0, 0));
         } else 
         {
             // destroy reticle
@@ -135,4 +155,12 @@ public class PlayerController : MonoBehaviour
     {
         collidingWall = false;
     }
+
+	public int getHealth(){
+		return health;
+	}
+
+	public void setHealth(int newHealth){
+		health = newHealth;
+	}
 }

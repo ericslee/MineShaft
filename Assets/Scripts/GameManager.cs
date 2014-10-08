@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
 
     // Player
     GameObject player;
+	public int playerHealth;
 
     // list of level triggers, (level - 1 is the index)
     List<GameObject> levelTriggers = new List<GameObject>();
@@ -36,12 +37,13 @@ public class GameManager : MonoBehaviour
         groundPrefab = Resources.Load("Prefabs/Ground");
         wallPrefab = Resources.Load("Prefabs/Wall");
         newLevelTriggerPrefab = Resources.Load("Prefabs/NewLevelTrigger");
-        fogPrefab = Resources.Load("Prefabs/Fog");
+        fogPrefab = Resources.Load("Prefabs/FogParticleSystem");
         backdropPrefab = Resources.Load("Prefabs/Backdrop");
         hud = GetComponent<GameHUD>();
 
         // Instantiate player at start of level 1
         player = (GameObject)Instantiate(playerPrefab);
+		playerHealth = 100;
         currentLevel = 1;
 
         SetUpLevel();
@@ -95,13 +97,20 @@ public class GameManager : MonoBehaviour
 
     void CreateFog()
     {
-        Instantiate(fogPrefab, new Vector3(0f, -10f, 0f), Quaternion.identity);
+        Instantiate(fogPrefab, new Vector3(-15f, 0f, 0f), Quaternion.identity);
     }
     
     // Update is called once per frame
     void Update()
     {
-    
+		if (Input.GetKey(KeyCode.N))
+		{
+			playerHealth -= 1;
+		}
+		else if (Input.GetKey(KeyCode.M))
+		{
+			playerHealth += 1;
+		}
     }
 
     public void ChangeLevel(int level, Vector3 cameraPos) 
