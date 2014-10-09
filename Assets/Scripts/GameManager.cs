@@ -78,15 +78,39 @@ public class GameManager : MonoBehaviour
         levelTriggers[0].GetComponent<LevelControl>().SetCorrespondingLevel(1);
         levelTriggers[0].GetComponent<LevelControl>().SetCameraPosition(new Vector3(0f, 12f, -30f));
         levelTriggers[1].GetComponent<LevelControl>().SetCorrespondingLevel(2);
-        levelTriggers[1].GetComponent<LevelControl>().SetCameraPosition(new Vector3(0f, 40f, -30f));
+        levelTriggers[1].GetComponent<LevelControl>().SetCameraPosition(new Vector3(0f, 42f, -30f));
 
         ///////////////////// Second level /////////////////////
-        Instantiate(platformPrefab, new Vector3(-2f, 30f, 0f), Quaternion.identity);
-        Instantiate(platformPrefab, new Vector3(5f, 33f, 0f), Quaternion.identity);
-        //Instantiate(platformPrefab, new Vector3(-2f, 36f, 0f), Quaternion.identity);
-        Instantiate(platformPrefab, new Vector3(5f, 39f, 0f), Quaternion.identity);
-        Instantiate(platformPrefab, new Vector3(-2f, 42f, 0f), Quaternion.identity);
-        //Instantiate(platformPrefab, new Vector3(5f, 45f, 0f), Quaternion.identity);
+		Instantiate(wallPrefab, new Vector3(-20f, 40f, 0f), Quaternion.identity);
+		Instantiate(wallPrefab, new Vector3(20f, 40f, 0f), Quaternion.identity);
+		Instantiate(backdropPrefab, new Vector3(0, 29, 0.5f), Quaternion.Euler(270, 0, 0));
+		Instantiate(backdropPrefab, new Vector3(0, 58, 0.5f), Quaternion.Euler(270, 0, 0));
+		///////////////////// Row 1 //////////////////////////// 
+        Instantiate(platformPrefab, new Vector3(-9f, 34f, 0f), Quaternion.identity);
+        Instantiate(platformPrefab, new Vector3(-5.75f, 34f, 0f), Quaternion.identity);
+		Instantiate(platformPrefab, new Vector3(-2.5f, 34f, 0f), Quaternion.identity);
+		Instantiate(platformPrefab, new Vector3(1.3f, 34f, 0f), Quaternion.identity);
+		Instantiate(platformPrefab, new Vector3(5.25f, 34f, 0f), Quaternion.identity);
+		Instantiate(platformPrefab, new Vector3(8.5f, 34f, 0f), Quaternion.identity);
+		///////////////////// Row 2 ////////////////////////////
+		Instantiate(platformPrefab, new Vector3(-2f, 42f, 0f), Quaternion.identity);
+		///////////////////// Row 3 ////////////////////////////
+		Instantiate(platformPrefab, new Vector3(-9f, 46f, 0f), Quaternion.identity);
+		Instantiate(platformPrefab, new Vector3(-5.25f, 46f, 0f), Quaternion.identity);
+		Instantiate(platformPrefab, new Vector3(-2f, 46f, 0f), Quaternion.identity);
+		Instantiate(platformPrefab, new Vector3(2f, 46f, 0f), Quaternion.identity);
+		Instantiate(platformPrefab, new Vector3(4.9f, 46f, 0f), Quaternion.identity);
+		Instantiate(platformPrefab, new Vector3(9f, 46f, 0f), Quaternion.identity);
+		//////////////////// Rows 4 & 5 ////////////////////////
+		Instantiate(platformPrefab, new Vector3(-6f, 49f, 0f), Quaternion.identity);
+		Instantiate(platformPrefab, new Vector3(3f, 52f, 0f), Quaternion.identity);
+		//////////////////// Row 6 //////////////////////////// 
+		Instantiate(platformPrefab, new Vector3(-9f, 56f, 0f), Quaternion.identity);
+		Instantiate(platformPrefab, new Vector3(-5.75f, 56f, 0f), Quaternion.identity);
+		Instantiate(platformPrefab, new Vector3(-2.5f, 56f, 0f), Quaternion.identity);
+		Instantiate(platformPrefab, new Vector3(1.3f, 56f, 0f), Quaternion.identity);
+		Instantiate(platformPrefab, new Vector3(5.25f, 56f, 0f), Quaternion.identity);
+		Instantiate(platformPrefab, new Vector3(8.5f, 56f, 0f), Quaternion.identity);
 
         ///////////////////// Winning trigger /////////////////////
         levelTriggers.Add((GameObject)Instantiate(newLevelTriggerPrefab, new Vector3(-41f, 49f, 0f), Quaternion.identity));
