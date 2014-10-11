@@ -85,13 +85,13 @@ public class GameManager : MonoBehaviour
         levelTriggers[2].GetComponent<LevelControl>().SetCorrespondingLevel(2);
         levelTriggers[2].GetComponent<LevelControl>().SetCameraPosition(new Vector3(0f, 42f, -30f));
         levelTriggers[3].GetComponent<LevelControl>().SetCorrespondingLevel(3);
-        levelTriggers[3].GetComponent<LevelControl>().SetCameraPosition(new Vector3(0f, 76f, -30f));
+        levelTriggers[3].GetComponent<LevelControl>().SetCameraPosition(new Vector3(0f, 72f, -30f));
 
 		//Level 3 to Level 4
-        levelTriggers.Add((GameObject)Instantiate(newLevelTriggerPrefab, new Vector3(5f, 90f, 0f), Quaternion.identity));
-        levelTriggers.Add((GameObject)Instantiate(newLevelTriggerPrefab, new Vector3(5f, 94f, 0f), Quaternion.identity));
+        levelTriggers.Add((GameObject)Instantiate(newLevelTriggerPrefab, new Vector3(5f, 85f, 0f), Quaternion.identity));
+        levelTriggers.Add((GameObject)Instantiate(newLevelTriggerPrefab, new Vector3(5f, 89f, 0f), Quaternion.identity));
         levelTriggers[4].GetComponent<LevelControl>().SetCorrespondingLevel(3);
-        levelTriggers[4].GetComponent<LevelControl>().SetCameraPosition(new Vector3(0f, 76f, -30f));
+        levelTriggers[4].GetComponent<LevelControl>().SetCameraPosition(new Vector3(0f, 72f, -30f));
         levelTriggers[5].GetComponent<LevelControl>().SetCorrespondingLevel(4);
         levelTriggers[5].GetComponent<LevelControl>().SetCameraPosition(new Vector3(0f, 104f, -30f));
 
@@ -135,19 +135,153 @@ public class GameManager : MonoBehaviour
 		Instantiate(platformPrefab, new Vector3(5.25f, 55f, 0f), Quaternion.identity);
 		Instantiate(platformPrefab, new Vector3(8.5f, 55f, 0f), Quaternion.identity);
 		//////////////////// Row 7 //////////////////////////// 
-		Instantiate(platformPrefab, new Vector3(-2f, 58f, 0f), Quaternion.identity);
+		Instantiate(platformPrefab, new Vector3(-2f, 57f, 0f), Quaternion.identity);
+		Instantiate(platformPrefab, new Vector3(1.75f, 59f, 0f), Quaternion.identity);
 
 		///////////////////// Third level /////////////////////
 		Instantiate(wallPrefab, new Vector3(-20f, 80f, 0f), Quaternion.identity);
 		Instantiate(wallPrefab, new Vector3(20f, 80f, 0f), Quaternion.identity);
-		Instantiate(backdropPrefab, new Vector3(0, 58, 0.5f), Quaternion.Euler(270, 0, 0));
-		Instantiate(backdropPrefab, new Vector3(0, 87, 0.5f), Quaternion.Euler(270, 0, 0));
-		///////////////////// Cage ///////////////////////////
-		Instantiate(platformPrefab, new Vector3(-9.5f, 63f, 0f), Quaternion.identity);
+		Instantiate(backdropPrefab, new Vector3(0, 59, 0.5f), Quaternion.Euler(270, 0, 0));
+		Instantiate(backdropPrefab, new Vector3(0, 88, 0.5f), Quaternion.Euler(270, 0, 0));
+		///////////////////// Cage 1 ///////////////////////////
 		Instantiate(platformPrefab, new Vector3(-7.5f, 60f, 0f), Quaternion.Euler(0, 0, 90));
-		Instantiate(platformPrefab, new Vector3(-4.25f, 63f, 0f), Quaternion.identity);
-		Instantiate(platformPrefab, new Vector3(-2.25f, 60f, 0f), Quaternion.Euler(0, 0, 90));
+		Instantiate(platformPrefab, new Vector3(-3f, 60f, 0f), Quaternion.Euler(0, 0, 90));
+		Instantiate(platformPrefab, new Vector3(3.75f, 60f, 0f), Quaternion.Euler(0, 0, 90));
+		Instantiate(platformPrefab, new Vector3(-9.5f, 63f, 0f), Quaternion.identity);
+		Instantiate(platformPrefab, new Vector3(-5f, 63f, 0f), Quaternion.identity);
+		Instantiate(platformPrefab, new Vector3(-1.75f, 63f, 0f), Quaternion.identity);
+		Instantiate(platformPrefab, new Vector3(1.5f, 63f, 0f), Quaternion.identity);
+		Instantiate(platformPrefab, new Vector3(5.75f, 63f, 0f), Quaternion.identity);
+		Instantiate(platformPrefab, new Vector3(9f, 63f, 0f), Quaternion.identity);
+		///////////////////// Cage 2 ///////////////////////////
+		Instantiate(platformPrefab, new Vector3(9f, 67f, 0f), Quaternion.Euler(0, 0, 90));
+		Instantiate(platformPrefab, new Vector3(4f, 67f, 0f), Quaternion.Euler(0, 0, 90));
+		Instantiate(platformPrefab, new Vector3(-2f, 67f, 0f), Quaternion.Euler(0, 0, 90));
+		Instantiate(platformPrefab, new Vector3(-10f, 67f, 0f), Quaternion.Euler(0, 0, 90));
+		Instantiate(platformPrefab, new Vector3(9f, 70f, 0f), Quaternion.identity);
+		Instantiate(platformPrefab, new Vector3(4.75f, 70f, 0f), Quaternion.identity);
+		Instantiate(platformPrefab, new Vector3(1.5f, 70f, 0f), Quaternion.identity);
+		Instantiate(platformPrefab, new Vector3(-2.5f, 70f, 0f), Quaternion.identity);
+		Instantiate(platformPrefab, new Vector3(-5.75f, 70f, 0f), Quaternion.identity);
+		Instantiate(platformPrefab, new Vector3(-10.25f, 70f, 0f), Quaternion.identity);
+		///////////////////// Cage 3 ///////////////////////////
+		Instantiate(platformPrefab, new Vector3(-9.5f, 74f, 0f), Quaternion.Euler(0, 0, 90));
+		Instantiate(platformPrefab, new Vector3(-5f, 74f, 0f), Quaternion.Euler(0, 0, 90));
+		Instantiate(platformPrefab, new Vector3(-0.25f, 74f, 0f), Quaternion.Euler(0, 0, 90));
+		Instantiate(platformPrefab, new Vector3(4.5f, 74f, 0f), Quaternion.Euler(0, 0, 90));
+		Instantiate(platformPrefab, new Vector3(7.75f, 74f, 0f), Quaternion.Euler(0, 0, 90));
+		Instantiate(platformPrefab, new Vector3(-9.5f, 77f, 0f), Quaternion.identity);
+		Instantiate(platformPrefab, new Vector3(-6.25f, 77f, 0f), Quaternion.identity);
+		Instantiate(platformPrefab, new Vector3(-3f, 77f, 0f), Quaternion.identity);
+		Instantiate(platformPrefab, new Vector3(-2f, 77f, 0f), Quaternion.identity);
+		Instantiate(platformPrefab, new Vector3(2.5f, 77f, 0f), Quaternion.identity);
+		Instantiate(platformPrefab, new Vector3(5.75f, 77f, 0f), Quaternion.identity);
+		Instantiate(platformPrefab, new Vector3(9f, 77f, 0f), Quaternion.identity);
+		///////////////////// Cage 4 ///////////////////////////
+		Instantiate(platformPrefab, new Vector3(-7.5f, 81f, 0f), Quaternion.Euler(0, 0, 90));
+		Instantiate(platformPrefab, new Vector3(-3f, 81f, 0f), Quaternion.Euler(0, 0, 90));
+		Instantiate(platformPrefab, new Vector3(3.75f, 81f, 0f), Quaternion.Euler(0, 0, 90));
+		Instantiate(platformPrefab, new Vector3(-9.5f, 84f, 0f), Quaternion.identity);
+		Instantiate(platformPrefab, new Vector3(-5f, 84f, 0f), Quaternion.identity);
+		Instantiate(platformPrefab, new Vector3(-1.75f, 84f, 0f), Quaternion.identity);
+		Instantiate(platformPrefab, new Vector3(1.5f, 84f, 0f), Quaternion.identity);
+		Instantiate(platformPrefab, new Vector3(5.75f, 84f, 0f), Quaternion.identity);
+		Instantiate(platformPrefab, new Vector3(9f, 84f, 0f), Quaternion.identity);
+		///////////////////// Cage 5 ///////////////////////////
+		Instantiate(platformPrefab, new Vector3(1.5f, 87f, 0f), Quaternion.identity);
 
+		///////////////////// Fourth level /////////////////////
+		Instantiate(backdropPrefab, new Vector3(0, 83, 0.5f), Quaternion.Euler(270, 0, 0));
+		Instantiate(backdropPrefab, new Vector3(0, 114, 0.5f), Quaternion.Euler(270, 0, 0));
+		///////////////////// Row 1 ////////////////////////////
+		Instantiate(platformPrefab, new Vector3(9f, 90f, 0f), Quaternion.identity);
+		Instantiate(platformPrefab, new Vector3(4.75f, 90f, 0f), Quaternion.identity);
+		Instantiate(platformPrefab, new Vector3(1.5f, 90f, 0f), Quaternion.identity);
+		Instantiate(platformPrefab, new Vector3(-2.5f, 90f, 0f), Quaternion.identity);
+		Instantiate(platformPrefab, new Vector3(-5.75f, 90f, 0f), Quaternion.identity);
+		Instantiate(platformPrefab, new Vector3(-10.25f, 90f, 0f), Quaternion.identity);
+		///////////////////// Row 2 ////////////////////////////
+		Instantiate(platformPrefab, new Vector3(-9.5f, 92f, 0f), Quaternion.identity);
+		Instantiate(platformPrefab, new Vector3(-6.25f, 92f, 0f), Quaternion.identity);
+		Instantiate(platformPrefab, new Vector3(-3f, 92f, 0f), Quaternion.identity);
+		Instantiate(platformPrefab, new Vector3(-2f, 92f, 0f), Quaternion.identity);
+		Instantiate(platformPrefab, new Vector3(2.5f, 92f, 0f), Quaternion.identity);
+		Instantiate(platformPrefab, new Vector3(5.75f, 92f, 0f), Quaternion.identity);
+		Instantiate(platformPrefab, new Vector3(9f, 92f, 0f), Quaternion.identity);
+		///////////////////// Row 3 ////////////////////////////
+		Instantiate(platformPrefab, new Vector3(-9.5f, 94f, 0f), Quaternion.identity);
+		Instantiate(platformPrefab, new Vector3(-5f, 94f, 0f), Quaternion.identity);
+		Instantiate(platformPrefab, new Vector3(-1.75f, 94f, 0f), Quaternion.identity);
+		Instantiate(platformPrefab, new Vector3(1.5f, 94f, 0f), Quaternion.identity);
+		Instantiate(platformPrefab, new Vector3(5.75f, 94f, 0f), Quaternion.identity);
+		Instantiate(platformPrefab, new Vector3(9f, 94f, 0f), Quaternion.identity);
+		///////////////////// Row 4 ////////////////////////////
+		Instantiate(platformPrefab, new Vector3(9f, 120f, 0f), Quaternion.identity);
+
+		///////////////////// Fifth level /////////////////////
+		Instantiate(wallPrefab, new Vector3(-20f, 120f, 0f), Quaternion.identity);
+		Instantiate(wallPrefab, new Vector3(20f, 120f, 0f), Quaternion.identity);
+		Instantiate(backdropPrefab, new Vector3(0, 114, 0.5f), Quaternion.Euler(270, 0, 0));
+		Instantiate(backdropPrefab, new Vector3(0, 143, 0.5f), Quaternion.Euler(270, 0, 0));
+		///////////////////// Cage 1 ///////////////////////////
+		Instantiate(platformPrefab, new Vector3(3.75f, 123.25f, 0f), Quaternion.Euler(0, 0, 90));
+		Instantiate(platformPrefab, new Vector3(3.75f, 120f, 0f), Quaternion.Euler(0, 0, 90));
+		Instantiate(platformPrefab, new Vector3(-9f, 120f, 0f), Quaternion.identity);
+		Instantiate(platformPrefab, new Vector3(-5.75f, 120f, 0f), Quaternion.identity);
+		Instantiate(platformPrefab, new Vector3(-2.5f, 120f, 0f), Quaternion.identity);
+		Instantiate(platformPrefab, new Vector3(0.75f, 120f, 0f), Quaternion.identity);
+		Instantiate(platformPrefab, new Vector3(-6.25f, 130f, 0f), Quaternion.identity);
+		Instantiate(platformPrefab, new Vector3(-3f, 130f, 0f), Quaternion.identity);
+		Instantiate(platformPrefab, new Vector3(0.25f, 130f, 0f), Quaternion.identity);
+		Instantiate(platformPrefab, new Vector3(3.5f, 130f, 0f), Quaternion.identity);
+		Instantiate(platformPrefab, new Vector3(6.75f, 130f, 0f), Quaternion.identity);
+		Instantiate(platformPrefab, new Vector3(10f, 130f, 0f), Quaternion.identity);
+		///////////////////// Cage 2 ///////////////////////////
+		Instantiate(platformPrefab, new Vector3(9f, 128f, 0f), Quaternion.Euler(0, 0, 90));
+		Instantiate(platformPrefab, new Vector3(7f, 128f, 0f), Quaternion.Euler(0, 0, 90));
+		Instantiate(platformPrefab, new Vector3(4f, 128f, 0f), Quaternion.Euler(0, 0, 90));
+		Instantiate(platformPrefab, new Vector3(2f, 128f, 0f), Quaternion.Euler(0, 0, 90));
+		Instantiate(platformPrefab, new Vector3(0.5f, 128f, 0f), Quaternion.Euler(0, 0, 90));
+		Instantiate(platformPrefab, new Vector3(-2f, 128f, 0f), Quaternion.Euler(0, 0, 90));
+		Instantiate(platformPrefab, new Vector3(-4f, 128f, 0f), Quaternion.Euler(0, 0, 90));
+		Instantiate(platformPrefab, new Vector3(-7f, 128f, 0f), Quaternion.Euler(0, 0, 90));
+		Instantiate(platformPrefab, new Vector3(-10f, 128f, 0f), Quaternion.Euler(0, 0, 90));
+		Instantiate(platformPrefab, new Vector3(-9.5f, 126f, 0f), Quaternion.identity);
+		Instantiate(platformPrefab, new Vector3(-6.25f, 126f, 0f), Quaternion.identity);
+		Instantiate(platformPrefab, new Vector3(-3f, 126f, 0f), Quaternion.identity);
+		Instantiate(platformPrefab, new Vector3(0.25f, 126f, 0f), Quaternion.identity);
+		Instantiate(platformPrefab, new Vector3(3.25f, 126f, 0f), Quaternion.identity);
+		Instantiate(platformPrefab, new Vector3(5.75f, 126f, 0f), Quaternion.identity);
+		Instantiate(platformPrefab, new Vector3(9f, 126f, 0f), Quaternion.identity);
+		///////////////////// Cage 3 ///////////////////////////
+		Instantiate(platformPrefab, new Vector3(-9.5f, 140f, 0f), Quaternion.identity);
+		Instantiate(platformPrefab, new Vector3(-6.25f, 140f, 0f), Quaternion.identity);
+		Instantiate(platformPrefab, new Vector3(-3f, 140f, 0f), Quaternion.identity);
+		Instantiate(platformPrefab, new Vector3(-2f, 140f, 0f), Quaternion.identity);
+		Instantiate(platformPrefab, new Vector3(1f, 140f, 0f), Quaternion.identity);
+		Instantiate(platformPrefab, new Vector3(2.5f, 140f, 0f), Quaternion.identity);
+		Instantiate(platformPrefab, new Vector3(5.75f, 140f, 0f), Quaternion.identity);
+		Instantiate(platformPrefab, new Vector3(9f, 140f, 0f), Quaternion.identity);
+		///////////////////// Cage 4 ///////////////////////////
+		Instantiate(platformPrefab, new Vector3(-10f, 142f, 0f), Quaternion.Euler(0, 0, 90));
+		Instantiate(platformPrefab, new Vector3(-7.5f, 142f, 0f), Quaternion.Euler(0, 0, 90));
+		Instantiate(platformPrefab, new Vector3(-5f, 142f, 0f), Quaternion.Euler(0, 0, 90));
+		Instantiate(platformPrefab, new Vector3(-3.5f, 142f, 0f), Quaternion.Euler(0, 0, 90));
+		Instantiate(platformPrefab, new Vector3(-1f, 142f, 0f), Quaternion.Euler(0, 0, 90));
+		Instantiate(platformPrefab, new Vector3(-1.75f, 142f, 0f), Quaternion.Euler(0, 0, 90));
+		Instantiate(platformPrefab, new Vector3(1f, 142f, 0f), Quaternion.Euler(0, 0, 90));
+		Instantiate(platformPrefab, new Vector3(3f, 142f, 0f), Quaternion.Euler(0, 0, 90));
+		Instantiate(platformPrefab, new Vector3(5.5f, 142f, 0f), Quaternion.Euler(0, 0, 90));
+		Instantiate(platformPrefab, new Vector3(7f, 142f, 0f), Quaternion.Euler(0, 0, 90));
+		Instantiate(platformPrefab, new Vector3(-9.5f, 144f, 0f), Quaternion.identity);
+		Instantiate(platformPrefab, new Vector3(-5f, 144f, 0f), Quaternion.identity);
+		Instantiate(platformPrefab, new Vector3(-1.75f, 144f, 0f), Quaternion.identity);
+		Instantiate(platformPrefab, new Vector3(1.5f, 144f, 0f), Quaternion.identity);
+		Instantiate(platformPrefab, new Vector3(5.75f, 144f, 0f), Quaternion.identity);
+		Instantiate(platformPrefab, new Vector3(9f, 144f, 0f), Quaternion.identity);
+		///////////////////// Cage 5 ///////////////////////////
+		Instantiate(platformPrefab, new Vector3(-3.5f, 150f, 0f), Quaternion.identity);
+		
         ///////////////////// Winning trigger /////////////////////
         levelTriggers.Add((GameObject)Instantiate(newLevelTriggerPrefab, new Vector3(-41f, 128f, 0f), Quaternion.identity));
         levelTriggers.Add((GameObject)Instantiate(newLevelTriggerPrefab, new Vector3(41f, 128f, 0f), Quaternion.identity));
