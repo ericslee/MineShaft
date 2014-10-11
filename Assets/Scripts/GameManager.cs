@@ -76,14 +76,32 @@ public class GameManager : MonoBehaviour
 		levelTriggers.Add((GameObject)Instantiate(newLevelTriggerPrefab, new Vector3(5f, 29f, 0f), Quaternion.identity));
 		levelTriggers[0].GetComponent<LevelControl>().SetCorrespondingLevel(1);
 		levelTriggers[0].GetComponent<LevelControl>().SetCameraPosition(new Vector3(0f, 12f, -30f));
-		//Level 2 to Level 3
-		levelTriggers.Add((GameObject)Instantiate(newLevelTriggerPrefab, new Vector3(-41f, 58f, 0f), Quaternion.identity));
-		levelTriggers.Add((GameObject)Instantiate(newLevelTriggerPrefab, new Vector3(41f, 62f, 0f), Quaternion.identity));
         levelTriggers[1].GetComponent<LevelControl>().SetCorrespondingLevel(2);
-		levelTriggers[1].GetComponent<LevelControl>().SetCameraPosition(new Vector3(0f, 42f, -30f));
+        levelTriggers[1].GetComponent<LevelControl>().SetCameraPosition(new Vector3(0f, 42f, -30f));
+
+		//Level 2 to Level 3
+		levelTriggers.Add((GameObject)Instantiate(newLevelTriggerPrefab, new Vector3(5f, 55f, 0f), Quaternion.identity));
+		levelTriggers.Add((GameObject)Instantiate(newLevelTriggerPrefab, new Vector3(5f, 59f, 0f), Quaternion.identity));
+        levelTriggers[2].GetComponent<LevelControl>().SetCorrespondingLevel(2);
+        levelTriggers[2].GetComponent<LevelControl>().SetCameraPosition(new Vector3(0f, 42f, -30f));
+        levelTriggers[3].GetComponent<LevelControl>().SetCorrespondingLevel(3);
+        levelTriggers[3].GetComponent<LevelControl>().SetCameraPosition(new Vector3(0f, 76f, -30f));
+
 		//Level 3 to Level 4
-		levelTriggers[2].GetComponent<LevelControl>().SetCorrespondingLevel(3);
-		levelTriggers[2].GetComponent<LevelControl>().SetCameraPosition(new Vector3(0f, 74f, -30f));
+        levelTriggers.Add((GameObject)Instantiate(newLevelTriggerPrefab, new Vector3(5f, 90f, 0f), Quaternion.identity));
+        levelTriggers.Add((GameObject)Instantiate(newLevelTriggerPrefab, new Vector3(5f, 94f, 0f), Quaternion.identity));
+        levelTriggers[4].GetComponent<LevelControl>().SetCorrespondingLevel(3);
+        levelTriggers[4].GetComponent<LevelControl>().SetCameraPosition(new Vector3(0f, 76f, -30f));
+        levelTriggers[5].GetComponent<LevelControl>().SetCorrespondingLevel(4);
+        levelTriggers[5].GetComponent<LevelControl>().SetCameraPosition(new Vector3(0f, 104f, -30f));
+
+        //Level 4 to Level 5
+        levelTriggers.Add((GameObject)Instantiate(newLevelTriggerPrefab, new Vector3(5f, 118f, 0f), Quaternion.identity));
+        levelTriggers.Add((GameObject)Instantiate(newLevelTriggerPrefab, new Vector3(5f, 122f, 0f), Quaternion.identity));
+        levelTriggers[6].GetComponent<LevelControl>().SetCorrespondingLevel(4);
+        levelTriggers[6].GetComponent<LevelControl>().SetCameraPosition(new Vector3(0f, 104f, -30f));
+        levelTriggers[7].GetComponent<LevelControl>().SetCorrespondingLevel(5);
+        levelTriggers[7].GetComponent<LevelControl>().SetCameraPosition(new Vector3(0f, 134f, -30f));
 
         ///////////////////// Second level /////////////////////
 		Instantiate(wallPrefab, new Vector3(-20f, 40f, 0f), Quaternion.identity);
@@ -131,10 +149,10 @@ public class GameManager : MonoBehaviour
 		Instantiate(platformPrefab, new Vector3(-2.25f, 60f, 0f), Quaternion.Euler(0, 0, 90));
 
         ///////////////////// Winning trigger /////////////////////
-        //levelTriggers.Add((GameObject)Instantiate(newLevelTriggerPrefab, new Vector3(-41f, 49f, 0f), Quaternion.identity));
-        //levelTriggers.Add((GameObject)Instantiate(newLevelTriggerPrefab, new Vector3(41f, 49f, 0f), Quaternion.identity));
-        //levelTriggers[2].GetComponent<LevelControl>().SetIsWinningTrigger(true);
-        //levelTriggers[3].GetComponent<LevelControl>().SetIsWinningTrigger(true);
+        levelTriggers.Add((GameObject)Instantiate(newLevelTriggerPrefab, new Vector3(-41f, 128f, 0f), Quaternion.identity));
+        levelTriggers.Add((GameObject)Instantiate(newLevelTriggerPrefab, new Vector3(41f, 128f, 0f), Quaternion.identity));
+        levelTriggers[8].GetComponent<LevelControl>().SetIsWinningTrigger(true);
+        levelTriggers[9].GetComponent<LevelControl>().SetIsWinningTrigger(true);
     }
 
     void CreateFog()
