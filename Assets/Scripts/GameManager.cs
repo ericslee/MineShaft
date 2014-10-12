@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
 
     // Player
     GameObject player;
+	PlayerController playerController;
 	public int playerHealth;
 
     // list of level triggers, (level - 1 is the index)
@@ -32,8 +33,9 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         // Cache references
-        playerPrefab = Resources.Load("Prefabs/Player");
-        platformPrefab = Resources.Load("Prefabs/Platform");
+        playerPrefab = Resources.Load("Characters/PlatformMiner");
+		//playerPrefab = Resources.Load("Prefabs/Player");
+		platformPrefab = Resources.Load("Prefabs/Platform");
         groundPrefab = Resources.Load("Prefabs/Ground");
         wallPrefab = Resources.Load("Prefabs/Wall");
         newLevelTriggerPrefab = Resources.Load("Prefabs/NewLevelTrigger");
@@ -42,7 +44,8 @@ public class GameManager : MonoBehaviour
         hud = GetComponent<GameHUD>();
 
         // Instantiate player at start of level 1
-        player = (GameObject)Instantiate(playerPrefab);
+		player = (GameObject)Instantiate(playerPrefab, new Vector3(1f, 0f, 0f), Quaternion.Euler(0,0,0));
+		playerController = player.GetComponent<PlayerController>();
 		playerHealth = 100;
         currentLevel = 1;
 
@@ -69,8 +72,10 @@ public class GameManager : MonoBehaviour
         Instantiate(platformPrefab, new Vector3(-2f, 24f, 0f), Quaternion.identity);
         Instantiate(platformPrefab, new Vector3(5f, 27f, 0f), Quaternion.identity);
 
-        Instantiate(backdropPrefab, new Vector3(0, 0, 0.5f), Quaternion.Euler(270, 0, 0));
+		Instantiate(backdropPrefab, new Vector3(0, 0, 0.5f), Quaternion.Euler(270, 0, 0));
         Instantiate(backdropPrefab, new Vector3(0, 29, 0.5f), Quaternion.Euler(270, 0, 0));
+
+		//Instantiate(clearPrefab, new Vector3(0, 0, 0.5f), Quaternion.Euler(270, 0, 0));
 
         // level change triggers
         levelTriggers.Add((GameObject)Instantiate(newLevelTriggerPrefab, new Vector3(5f, 25f, 0f), Quaternion.identity));
@@ -97,7 +102,7 @@ public class GameManager : MonoBehaviour
 
     void CreateFog()
     {
-        Instantiate(fogPrefab, new Vector3(-15f, 0f, 0f), Quaternion.identity);
+        Instantiate(fogPrefab, new Vector3(0f, -10f, 0f), Quaternion.identity);
     }
     
     // Update is called once per frame
@@ -105,12 +110,13 @@ public class GameManager : MonoBehaviour
     {
 		if (Input.GetKey(KeyCode.N))
 		{
-			playerHealth -= 1;
+			playerController.setHealth(playerController.getHealth()-1);
 		}
 		else if (Input.GetKey(KeyCode.M))
 		{
-			playerHealth += 1;
+			playerController.setHealth(playerController.getHealth()+1);
 		}
+		playerHealth = playerController.getHealth();
     }
 
     public void ChangeLevel(int level, Vector3 cameraPos) 

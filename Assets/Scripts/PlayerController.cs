@@ -3,7 +3,6 @@ using System.Collections;
 
 public class PlayerController : MonoBehaviour
 {
-
     // Controls
     float distToGround;
     bool collidingWall; // used for disabling left, right controls when colliding with a wall
@@ -19,6 +18,10 @@ public class PlayerController : MonoBehaviour
 
 	int health;
 
+	Quaternion frontRotation;
+	Quaternion leftRotation;
+	Quaternion rightRotation;
+
     // Use this for initialization
     void Start()
     {
@@ -30,6 +33,10 @@ public class PlayerController : MonoBehaviour
         distToGround = collider.bounds.extents.y;
 
 		health = 100;
+
+		frontRotation = Quaternion.Euler(0,180,0);
+		leftRotation = Quaternion.Euler(0,-90,0);
+		rightRotation = Quaternion.Euler(0,90,0);
     }
 
     // Update is called once per frame
@@ -40,6 +47,7 @@ public class PlayerController : MonoBehaviour
 
     void HandleInput()
     {
+
         // Switch into shooting mode
         if (Input.GetKeyDown(KeyCode.LeftShift)) 
         {
@@ -53,22 +61,54 @@ public class PlayerController : MonoBehaviour
             {
                 if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
                 {
+					transform.rotation = Quaternion.identity;
                     transform.Translate(Vector2.right * 4f * Time.deltaTime);
+					if (!animation.IsPlaying("walking") && !animation.IsPlaying("jump") && IsGrounded()){
+						animation.Play("walking");
+					}
+					transform.rotation = rightRotation;
+					/*Component[] comps = gameObject.GetComponentsInChildren<Transform>();
+					Component mesh = null;
+					for (int i=0; i<comps.Length; i+=1){
+						if (comps[i].name == "AlphaHighResMeshes"){
+							mesh = comps[i];
+							break;
+						}
+					}
+					if (mesh){
+						Transform[] allChildren = mesh.GetComponentsInChildren<Transform>();
+						foreach (Transform child in allChildren) {
+							// do whatever with child transform here
+							child.transform.Translate(100,0,0);
+						}
+					}*/
                 }
-                if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
+                else if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
                 {
+					transform.rotation = Quaternion.identity;
                     transform.Translate(-Vector2.right * 4f * Time.deltaTime);
+					if (!animation.IsPlaying("walking") && !animation.IsPlaying("jump") && IsGrounded()){
+						animation.Play("walking");
+					}
+					transform.rotation = leftRotation;
                 }
+				else if (animation.IsPlaying("walking")){
+					animation.Stop();
+				}
             }
 
             // Jump
             if (IsGrounded())
             {
+				Quaternion rotation = transform.rotation;
+				transform.rotation = Quaternion.identity;
                 collidingWall = false;
                 if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow))
                 {
-                    rigidbody.velocity = new Vector3(0, 8, 0);
+					animation.Play("jump");
+                    rigidbody.velocity = new Vector3(0, 9, 0);
                 }
+				transform.rotation = rotation;
             }
         }
 
@@ -130,7 +170,7 @@ public class PlayerController : MonoBehaviour
         {
             // create reticle
             //TODO: instantiate reticle position relative to which way the character is facing
-            Vector3 reticlePosition = new Vector3(transform.position.x + 4f, transform.position.y + 3, transform.position.z);
+            Vector3 reticlePosition = new Vector3(transform.position.x + 4f, transform.position.y + 3, transform.position.z);	
 			targetingReticle = (GameObject)Instantiate(targetingReticlePrefab, reticlePosition, Quaternion.Euler(90, 0, 0));
         } else 
         {
