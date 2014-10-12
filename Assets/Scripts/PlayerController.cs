@@ -3,6 +3,10 @@ using System.Collections;
 
 public class PlayerController : MonoBehaviour
 {
+	public float jumpHeight;
+	public int health;
+	public float speed;
+
     // Controls
     float distToGround;
     bool collidingWall; // used for disabling left, right controls when colliding with a wall
@@ -15,8 +19,6 @@ public class PlayerController : MonoBehaviour
     // Platform gun
     Object platformPrefab;
     GameObject currentActivePlatform;
-
-	int health;
 
 	Quaternion frontRotation;
 	Quaternion leftRotation;
@@ -31,8 +33,6 @@ public class PlayerController : MonoBehaviour
 
         // get distance to ground
         distToGround = collider.bounds.extents.y;
-
-		health = 100;
 
 		frontRotation = Quaternion.Euler(0,180,0);
 		leftRotation = Quaternion.Euler(0,-90,0);
@@ -62,7 +62,7 @@ public class PlayerController : MonoBehaviour
                 if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
                 {
 					transform.rotation = Quaternion.identity;
-                    transform.Translate(Vector2.right * 4f * Time.deltaTime);
+                    transform.Translate(Vector2.right * speed * Time.deltaTime);
 					if (!animation.IsPlaying("walking") && !animation.IsPlaying("jump") && IsGrounded()){
 						animation.Play("walking");
 					}
@@ -86,7 +86,7 @@ public class PlayerController : MonoBehaviour
                 else if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
                 {
 					transform.rotation = Quaternion.identity;
-                    transform.Translate(-Vector2.right * 4f * Time.deltaTime);
+                    transform.Translate(-Vector2.right * speed * Time.deltaTime);
 					if (!animation.IsPlaying("walking") && !animation.IsPlaying("jump") && IsGrounded()){
 						animation.Play("walking");
 					}
@@ -106,7 +106,7 @@ public class PlayerController : MonoBehaviour
                 if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow))
                 {
 					animation.Play("jump");
-                    rigidbody.velocity = new Vector3(0, 9, 0);
+                    rigidbody.velocity = new Vector3(0, jumpHeight, 0);
                 }
 				transform.rotation = rotation;
             }
