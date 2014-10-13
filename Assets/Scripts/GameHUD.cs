@@ -4,6 +4,7 @@ using System.Collections;
 public class GameHUD : MonoBehaviour
 {
     GameManager gameManager;
+    PlayerController playerController;
 
     // win/loss conditions
     bool hasPlayerWon = false;
@@ -14,6 +15,7 @@ public class GameHUD : MonoBehaviour
     {
         // cache references
         gameManager = GetComponent<GameManager>();
+        playerController = GameObject.Find("PlatformMiner(Clone)").GetComponent<PlayerController>();
     }
     
     // Update is called once per frame
@@ -34,7 +36,8 @@ public class GameHUD : MonoBehaviour
             "\nArrow keys: aim" +
             "\n\nSpace: fire platform" +
             "\n\nU: fly in DEBUG" + 
-		    "\n\nHealth: " + gameManager.playerHealth);
+		    "\n\nHealth: " + gameManager.playerHealth +
+            "\n\nGun: " + playerController.GetGunType());
 
         // Win/loss
         if (hasPlayerWon)

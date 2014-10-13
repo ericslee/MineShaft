@@ -1,5 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
+
+public enum GunType {PlatformGun, GravityGun};
 
 public class PlayerController : MonoBehaviour
 {
@@ -12,9 +15,17 @@ public class PlayerController : MonoBehaviour
     GameObject targetingReticle;
     Object targetingReticlePrefab;
 
+    // Gun state
+    GunType currentGun;
+
     // Platform gun
     Object platformPrefab;
     GameObject currentActivePlatform;
+
+    // Gravity gun
+    Object gravityCenterPrefab;
+    GameObject currentActiveGravityCenter;
+    HashSet<GameObject> gravityTargets = new HashSet<GameObject>(); // set of objects to be affected by gravity
 
 	int health;
 
@@ -27,6 +38,7 @@ public class PlayerController : MonoBehaviour
     {
         // cache references
         platformPrefab = Resources.Load("Prefabs/Platform");
+        gravityCenterPrefab = Resources.Load("Prefabs/GravityCenter");
         targetingReticlePrefab = Resources.Load("Prefabs/Reticle");
 
         // get distance to ground
@@ -37,6 +49,11 @@ public class PlayerController : MonoBehaviour
 		frontRotation = Quaternion.Euler(0,180,0);
 		leftRotation = Quaternion.Euler(0,-90,0);
 		rightRotation = Quaternion.Euler(0,90,0);
+
+        currentGun = GunType.PlatformGun;
+
+        // do not allow collisions between reticle and certain objects that should be not be selectable for gravity center effects
+        Physics.IgnoreLayerCollision(8, 9, true);
     }
 
     // Update is called once per frame
@@ -52,7 +69,22 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.LeftShift)) 
         {
             shootingMode = !shootingMode;
+
+            // disable gravity center
+            if (currentActiveGravityCenter)
+            {
+                Destroy(currentActiveGravityCenter);
+                gravityTargets.Clear();
+            }
+
+
             HandleReticle();
+        }
+
+        // Switch gun type
+        if (Input.GetKeyDown(KeyCode.RightShift))
+        {
+            currentGun = currentGun.Equals(GunType.PlatformGun) ? GunType.GravityGun : GunType.PlatformGun;
         }
 
         if (!shootingMode)
@@ -116,33 +148,43 @@ public class PlayerController : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                // create platform at the location of the targeting reticle
-                if (currentActivePlatform)
+                if (currentGun.Equals(GunType.PlatformGun))
                 {
-                    Destroy(currentActivePlatform);
+                    // create platform at the location of the targeting reticle
+                    if (currentActivePlatform)
+                    {
+                        Destroy(currentActivePlatform);
+                    }
+
+    				Vector3 platformPosition = targetingReticle.transform.position;
+    				float randomOffsetX = Random.value;
+    				float randomOffsetY = Random.value;
+    				Light[] lights = targetingReticle.GetComponentsInChildren<Light> ();
+    				float range = 0;
+    				if (lights.Length != 1){
+    					Debug.Log("Error, targeting reticle should have exactly 1 light child");
+    				}
+    				else{
+    					range = lights[0].range;
+    				}
+    				platformPosition.x += randomOffsetX*range;
+    				platformPosition.y += randomOffsetY*range;
+
+                    currentActivePlatform = 
+    					(GameObject)Instantiate(platformPrefab, platformPosition, Quaternion.identity);
+
+                    // exit out of shooting mode
+                    shootingMode = false;
+                    HandleReticle();
                 }
-
-				Vector3 platformPosition = targetingReticle.transform.position;
-				float randomOffsetX = Random.value;
-				float randomOffsetY = Random.value;
-				Light[] lights = targetingReticle.GetComponentsInChildren<Light> ();
-				float range = 0;
-				if (lights.Length != 1){
-					Debug.Log("Error, targeting reticle should have exactly 1 light child");
-				}
-				else{
-					range = lights[0].range;
-				}
-				platformPosition.x += randomOffsetX*range;
-				platformPosition.y += randomOffsetY*range;
-
-                currentActivePlatform = 
-					(GameObject)Instantiate(platformPrefab, platformPosition, Quaternion.identity);
-
-
-                // exit out of shooting mode
-                shootingMode = false;
-                HandleReticle();
+                else if (currentGun.Equals(GunType.GravityGun))
+                {
+                    // first create gravity center if it does not exist
+                    if (!currentActiveGravityCenter)
+                    {
+                        currentActiveGravityCenter = (GameObject)Instantiate(gravityCenterPrefab, targetingReticle.transform.position, Quaternion.Euler(0, 90, 0));
+                    }
+                }  
             }
         }
 
@@ -196,6 +238,18 @@ public class PlayerController : MonoBehaviour
         collidingWall = false;
     }
 
+    public void AddToGravityList(GameObject obj)
+    {
+        gravityTargets.Add(obj);
+
+        // move object over to gravity center
+        if (currentActiveGravityCenter)
+        {
+            float timeToGravityCenter = Vector3.Distance(currentActiveGravityCenter.transform.position, obj.transform.position) / 5.0f;
+            iTween.MoveTo(obj, currentActiveGravityCenter.transform.position, timeToGravityCenter);
+        }
+    }
+
 	public int getHealth(){
 		return health;
 	}
@@ -203,4 +257,9 @@ public class PlayerController : MonoBehaviour
 	public void setHealth(int newHealth){
 		health = newHealth;
 	}
+
+    public GunType GetGunType()
+    {
+        return currentGun;
+    }
 }

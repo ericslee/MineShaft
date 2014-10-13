@@ -84,7 +84,7 @@ GameObject:
   - 4: {fileID: 109295411}
   - 114: {fileID: 109295410}
   - 114: {fileID: 109295412}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GameManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -338,7 +338,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: bab9ac795588dad46a4ab097b91322ee, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bab9ac795588dad46a4ab097b91322ee, type: 2}
