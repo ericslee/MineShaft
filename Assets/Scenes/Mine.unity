@@ -340,6 +340,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: bab9ac795588dad46a4ab097b91322ee, type: 2}
+      propertyPath: loseSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 6e8105b848ed27f4996f9a0715734fe0, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bab9ac795588dad46a4ab097b91322ee, type: 2}
   m_RootGameObject: {fileID: 109295409}

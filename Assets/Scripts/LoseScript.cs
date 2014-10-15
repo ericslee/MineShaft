@@ -2,11 +2,11 @@
 using System.Collections;
 
 public class LoseScript : MonoBehaviour {
-	
+	public AudioClip loseSound;
 	private GUIStyle buttonStyle; 
 	// Use this for initialization 
 	void Start () {
-		
+		AudioSource.PlayClipAtPoint (loseSound, transform.position);	
 	} 
 	
 	// Update is called once per frame 
@@ -22,7 +22,7 @@ public class LoseScript : MonoBehaviour {
 		// The scene needs to be added into build setting to be loaded! 
 		if (GUILayout.Button("New Game")) 
 		{ 
-			Application.LoadLevel("Level1"); 
+			Application.LoadLevel("Mine"); 
 		}
 		
 		if (GUILayout.Button("Exit")) 

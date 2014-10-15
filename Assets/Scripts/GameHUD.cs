@@ -21,7 +21,9 @@ public class GameHUD : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-    
+    	if (playerController.getHealth () < 1) {
+			hasPlayerLost = true;
+		}
     }
 
     void OnGUI()
@@ -41,11 +43,13 @@ public class GameHUD : MonoBehaviour
 
         // Win/loss
         if (hasPlayerWon)
-        {
-            GUI.Label(new Rect(Screen.width / 2 - Screen.width / 8, Screen.height / 2, Screen.width / 4, Screen.height / 3), "You escaped the mine!");
+		{
+			Application.LoadLevel("Win"); 
+            //GUI.Label(new Rect(Screen.width / 2 - Screen.width / 8, Screen.height / 2, Screen.width / 4, Screen.height / 3), "You escaped the mine!");
         } else if (hasPlayerLost)
-        {
-            GUI.Label(new Rect(Screen.width / 2 - Screen.width / 16, Screen.height / 2, Screen.width / 4, Screen.height / 3), "You lose...");
+		{
+			Application.LoadLevel("Lose"); 
+			//GUI.Label(new Rect(Screen.width / 2 - Screen.width / 16, Screen.height / 2, Screen.width / 4, Screen.height / 3), "You lose...");
         }
     }
 

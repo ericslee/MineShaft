@@ -6,6 +6,9 @@ public enum GunType {PlatformGun, GravityGun};
 
 public class PlayerController : MonoBehaviour
 {
+	//Sound
+	public AudioClip jumpSound;//=  Resources.Load("MineShaft/Assets/Sounds/hop.wav") as AudioClip;
+
     // Controls
     float distToGround;
     bool collidingWall; // used for disabling left, right controls when colliding with a wall
@@ -135,10 +138,11 @@ public class PlayerController : MonoBehaviour
 				Quaternion rotation = transform.rotation;
 				transform.rotation = Quaternion.identity;
                 collidingWall = false;
-                if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow))
+                if (Input.GetKeyDown(KeyCode.Space) /*|| Input.GetKeyDown(KeyCode.UpArrow)*/)
                 {
 					animation.Play("jump");
                     rigidbody.velocity = new Vector3(0, 9, 0);
+					AudioSource.PlayClipAtPoint(jumpSound, transform.position);
                 }
 				transform.rotation = rotation;
             }
