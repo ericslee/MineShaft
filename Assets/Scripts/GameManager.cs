@@ -12,11 +12,9 @@ public class GameManager : MonoBehaviour
     // Player
     GameObject player;
 	PlayerController playerController;
-	public int playerHealth;
 
 	GameObject player2;
 	PlayerController player2Controller;
-	public int player2Health;
 
 	int activePlayer;
 
@@ -39,7 +37,7 @@ public class GameManager : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-		activePlayer = 1;
+		activePlayer = 0;
         // Cache references
         playerPrefab = Resources.Load("Characters/PlatformMiner");
 		//player2Prefab = Resources.Load("Characters/GravityMiner");
@@ -318,13 +316,12 @@ public class GameManager : MonoBehaviour
     {
 		if (Input.GetKey(KeyCode.N))
 		{
-			playerController.setHealth(playerController.getHealth()-1);
+			GetActivePlayer().setHealth(playerController.getHealth()-1);
 		}
 		else if (Input.GetKey(KeyCode.M))
 		{
-			playerController.setHealth(playerController.getHealth()+1);
+			GetActivePlayer().setHealth(playerController.getHealth()+1);
 		}
-		playerHealth = playerController.getHealth();
     }
 
     public void ChangeLevel(int level, Vector3 cameraPos) 
@@ -358,4 +355,9 @@ public class GameManager : MonoBehaviour
     {
         return currentLevel;
     }
+
+	public PlayerController GetActivePlayer(){
+		if (activePlayer == 0) return playerController;
+		else return player2Controller;
+	}
 }
