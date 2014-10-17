@@ -12,16 +12,12 @@ public class FogScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
 	}
 
 	void OnParticleCollision(GameObject other) {
 		if (other.tag == "Player"){
-			PlayerController pc = other.GetComponent<PlayerController>();
-			if (pc){
-				pc.setHealth(pc.getHealth()-1);
-			}
-			//gameManager.playerHealth -= 1;
+			PlayerController pc = gameManager.GetActivePlayer();
+			//pc.setHealth(pc.getHealth()-1);
 		}
 	}
 }

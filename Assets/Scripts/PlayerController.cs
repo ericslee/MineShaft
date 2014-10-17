@@ -6,6 +6,10 @@ public enum GunType {PlatformGun, GravityGun};
 
 public class PlayerController : MonoBehaviour
 {
+
+	public float jumpHeight;
+	public int health;
+
 	//Sound
 	AudioClip jumpSound;//=  Resources.Load("MineShaft/Assets/Sounds/hop.wav") as AudioClip;
     AudioSource jumpSource;
@@ -30,11 +34,11 @@ public class PlayerController : MonoBehaviour
     GameObject currentActiveGravityCenter;
     HashSet<GameObject> gravityTargets = new HashSet<GameObject>(); // set of objects to be affected by gravity
 
-	int health;
-
 	Quaternion frontRotation;
 	Quaternion leftRotation;
 	Quaternion rightRotation;
+
+	bool m_isActive;
 
     // Use this for initialization
     void Start()
@@ -49,8 +53,6 @@ public class PlayerController : MonoBehaviour
 
         // get distance to ground
         distToGround = collider.bounds.extents.y;
-
-		health = 100;
 
 		frontRotation = Quaternion.Euler(0,180,0);
 		leftRotation = Quaternion.Euler(0,-90,0);
@@ -68,7 +70,7 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        HandleInput();
+        if (m_isActive) HandleInput();
     }
 
     void HandleInput()
@@ -83,27 +85,12 @@ public class PlayerController : MonoBehaviour
         {
             if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
             {
-                transform.rotation = Quaternion.identity;
+				transform.rotation = Quaternion.identity;
                 transform.Translate(Vector2.right * 4f * Time.deltaTime);
                 if (!animation.IsPlaying("walking") && !animation.IsPlaying("jump") && IsGrounded()){
                     animation.Play("walking");
                 }
                 transform.rotation = rightRotation;
-                /*Component[] comps = gameObject.GetComponentsInChildren<Transform>();
-                    Component mesh = null;
-                    for (int i=0; i<comps.Length; i+=1){
-                        if (comps[i].name == "AlphaHighResMeshes"){
-                            mesh = comps[i];
-                            break;
-                        }
-                    }
-                    if (mesh){
-                        Transform[] allChildren = mesh.GetComponentsInChildren<Transform>();
-                        foreach (Transform child in allChildren) {
-                            // do whatever with child transform here
-                            child.transform.Translate(100,0,0);
-                        }
-                    }*/
             }
             else if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
             {
@@ -128,7 +115,7 @@ public class PlayerController : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Space) /*|| Input.GetKeyDown(KeyCode.UpArrow)*/)
             {
                 animation.Play("jump");
-                rigidbody.velocity = new Vector3(0, 9, 0);
+                rigidbody.velocity = new Vector3(0, jumpHeight, 0);
                 jumpSource.Play();
             }
             transform.rotation = rotation;
@@ -140,6 +127,10 @@ public class PlayerController : MonoBehaviour
             rigidbody.velocity = new Vector3(0, 8, 0);
         }
     }
+
+
+	void Follow(){
+	}
 
     void HandleGunControls()
     {
@@ -265,8 +256,18 @@ public class PlayerController : MonoBehaviour
 		health = newHealth;
 	}
 
+
+	public void setActive(bool isActive){
+		m_isActive = isActive;
+	}
+
+	public bool isActive(){
+		return m_isActive;
+	}
+
     public GunType GetGunType()
     {
         return currentGun;
     }
+
 }

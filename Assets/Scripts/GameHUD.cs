@@ -4,7 +4,6 @@ using System.Collections;
 public class GameHUD : MonoBehaviour
 {
     GameManager gameManager;
-    PlayerController playerController;
 
     // win/loss conditions
     bool hasPlayerWon = false;
@@ -15,13 +14,12 @@ public class GameHUD : MonoBehaviour
     {
         // cache references
         gameManager = GetComponent<GameManager>();
-        playerController = GameObject.Find("PlatformMiner(Clone)").GetComponent<PlayerController>();
     }
     
     // Update is called once per frame
     void Update()
     {
-    	if (playerController.getHealth () < 1) {
+		if (gameManager.GetActivePlayer().getHealth () < 1) {
 			hasPlayerLost = true;
 		}
     }
@@ -37,8 +35,8 @@ public class GameHUD : MonoBehaviour
             "\n\nMouse: aim" +
             "\n\nClick: fire gun" +
             "\n\nU: fly in DEBUG" + 
-		    "\n\nHealth: " + gameManager.playerHealth +
-            "\n\nGun: " + playerController.GetGunType());
+		    "\n\nHealth: " + gameManager.GetActivePlayer().getHealth() +
+		    "\n\nGun: " + gameManager.GetActivePlayer().GetGunType());
 
         // Win/loss
         if (hasPlayerWon)
