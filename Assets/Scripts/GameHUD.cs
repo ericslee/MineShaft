@@ -31,12 +31,11 @@ public class GameHUD : MonoBehaviour
         GUI.Label(new Rect(10, 5, Screen.width / 5, Screen.height / 25), "Current Level: " + gameManager.GetCurrentLevel());
 
         // Instructions
-        GUI.Label(new Rect(10, 40, Screen.width / 5, Screen.height / 2 + 10), "Controls - \nLeft+right arrows: movement" +
+        GUI.Label(new Rect(10, 40, Screen.width / 5, Screen.height / 2 + 10), "Controls - \nA+D or Left+right arrows: movement" +
             "\n\nSpace: jump" +
-            "\n\nLeft-shift: toggle shooting mode" +
-            "\n\nIn shooting mode -" +
-            "\nArrow keys: aim" +
-            "\n\nSpace: fire platform" +
+            "\n\nLeft-shift: Switch gun" +
+            "\n\nMouse: aim" +
+            "\n\nClick: fire gun" +
             "\n\nU: fly in DEBUG" + 
 		    "\n\nHealth: " + gameManager.playerHealth +
             "\n\nGun: " + playerController.GetGunType());

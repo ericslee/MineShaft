@@ -47,27 +47,6 @@ public class ReticleScript : MonoBehaviour
     		else if (childLight.range > max) lightRangeSign = -1;
     		range = childLight.range;
         }
-        HandleInput();
-    }
-
-    void HandleInput()
-    {
-        if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
-        {
-            transform.Translate(Vector2.right * 4f * Time.deltaTime);
-        }
-        if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
-        {
-            transform.Translate(-Vector2.right * 4f * Time.deltaTime);
-        }
-        if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W))
-        {
-            transform.Translate(new Vector3(0, 0, -1) * 4f * Time.deltaTime);
-        }
-        if (Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S))
-        {
-            transform.Translate(new Vector3(0, 0, 1) * 4f * Time.deltaTime);
-        }
     }
 
     void OnTriggerEnter(Collider other)
