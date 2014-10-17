@@ -51,7 +51,7 @@ public class ReticleScript : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (playerController.GetGunType().Equals(GunType.GravityGun)) 
+        if (playerController && playerController.GetGunType().Equals(GunType.GravityGun)) 
         {
             playerController.AddToGravityList(other.gameObject);
         }

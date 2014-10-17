@@ -204,11 +204,12 @@ public class PlayerController : MonoBehaviour
                 }
                 else if (currentGun.Equals(GunType.GravityGun))
                 {
-                    // first create gravity center if it does not exist
-                    if (!currentActiveGravityCenter)
+                    // update gravity center location
+                    if (currentActiveGravityCenter) 
                     {
-                        currentActiveGravityCenter = (GameObject)Instantiate(gravityCenterPrefab, targetingReticle.transform.position, Quaternion.Euler(0, 90, 0));
+                        Destroy(currentActiveGravityCenter);
                     }
+                    currentActiveGravityCenter = (GameObject)Instantiate(gravityCenterPrefab, targetingReticle.transform.position, Quaternion.Euler(0, 90, 0));
                 }  
             }
         }
