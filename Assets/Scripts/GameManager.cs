@@ -32,6 +32,7 @@ public class GameManager : MonoBehaviour
     Object newLevelTriggerPrefab;
     Object fogPrefab;
     Object backdropPrefab;
+    Object enemyPrefab;
 
 	bool[] hasSpawnedFog;
 
@@ -45,7 +46,6 @@ public class GameManager : MonoBehaviour
         // Cache references
         playerPrefab = Resources.Load("Characters/PlatformMiner");
 		//player2Prefab = Resources.Load("Characters/GravityMiner");
-		//playerPrefab = Resources.Load("Prefabs/Player");
 		platformPrefab = Resources.Load("Prefabs/Platform");
 		debris1Prefab = Resources.Load("Prefabs/Debris_1_Prefab");
         groundPrefab = Resources.Load("Prefabs/Ground");
@@ -54,6 +54,7 @@ public class GameManager : MonoBehaviour
         newLevelTriggerPrefab = Resources.Load("Prefabs/NewLevelTrigger");
         fogPrefab = Resources.Load("Prefabs/FogParticleSystem");
         backdropPrefab = Resources.Load("Prefabs/Backdrop");
+        enemyPrefab = Resources.Load("Prefabs/Enemy");
         hud = GetComponent<GameHUD>();
 
         // Instantiate player at start of level 1
@@ -68,7 +69,7 @@ public class GameManager : MonoBehaviour
         currentLevel = 1;
 
         SetUpLevel();
-
+        AddEnemies();
         CreateFog();
 
 		hasSpawnedFog = new bool[5];
@@ -334,6 +335,11 @@ public class GameManager : MonoBehaviour
     void CreateFog()
     {
         Instantiate(fogPrefab, new Vector3(0f, -10f, 0f), Quaternion.identity);
+    }
+
+    void AddEnemies()
+    {
+        Instantiate(enemyPrefab, new Vector3(9f, 10f, 0f), Quaternion.identity);
     }
     
     // Update is called once per frame
