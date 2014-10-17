@@ -24,6 +24,8 @@ public class PlayerController : MonoBehaviour
 	Quaternion leftRotation;
 	Quaternion rightRotation;
 
+	bool m_isActive;
+
     // Use this for initialization
     void Start()
     {
@@ -42,7 +44,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        HandleInput();
+        if (m_isActive) HandleInput();
     }
 
     void HandleInput()
@@ -153,6 +155,9 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+	void Follow(){
+	}
+
     // checks if player is grounded with three tiny raycasts from the left bound, center, and right bound of the collider
     bool IsGrounded()
     {
@@ -202,5 +207,13 @@ public class PlayerController : MonoBehaviour
 
 	public void setHealth(int newHealth){
 		health = newHealth;
+	}
+
+	public void setActive(bool isActive){
+		m_isActive = isActive;
+	}
+
+	public bool isActive(){
+		return m_isActive;
 	}
 }

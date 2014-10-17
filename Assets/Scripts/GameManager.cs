@@ -14,11 +14,18 @@ public class GameManager : MonoBehaviour
 	PlayerController playerController;
 	public int playerHealth;
 
+	GameObject player2;
+	PlayerController player2Controller;
+	public int player2Health;
+
+	int activePlayer;
+
     // list of level triggers, (level - 1 is the index)
     List<GameObject> levelTriggers = new List<GameObject>();
 
     // Prefabs
     Object playerPrefab;
+	Object player2Prefab;
     Object platformPrefab;
     Object groundPrefab;
     Object wallPrefab;
@@ -32,8 +39,10 @@ public class GameManager : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+		activePlayer = 1;
         // Cache references
         playerPrefab = Resources.Load("Characters/PlatformMiner");
+		//player2Prefab = Resources.Load("Characters/GravityMiner");
 		//playerPrefab = Resources.Load("Prefabs/Player");
 		platformPrefab = Resources.Load("Prefabs/Platform");
         groundPrefab = Resources.Load("Prefabs/Ground");
@@ -46,7 +55,12 @@ public class GameManager : MonoBehaviour
         // Instantiate player at start of level 1
 		player = (GameObject)Instantiate(playerPrefab, new Vector3(1f, 0f, 0f), Quaternion.Euler(0,0,0));
 		playerController = player.GetComponent<PlayerController>();
-		playerHealth = 100;
+		playerController.setActive(true);
+
+		//player2 = (GameObject)Instantiate(player2Prefab, new Vector3(1f, 0f, 1.5f), Quaternion.Euler(0,0,0));
+		//player2Controller = player2.GetComponent<PlayerController>();
+		//player2Controller.setActive(false);
+
         currentLevel = 1;
 
         SetUpLevel();
@@ -70,8 +84,8 @@ public class GameManager : MonoBehaviour
         Instantiate(platformPrefab, new Vector3(-2f, 24f, 0f), Quaternion.identity);
         Instantiate(platformPrefab, new Vector3(5f, 27f, 0f), Quaternion.identity);
 
-		Instantiate(backdropPrefab, new Vector3(0, 0, 0.5f), Quaternion.Euler(270, 0, 0));
-        Instantiate(backdropPrefab, new Vector3(0, 29, 0.5f), Quaternion.Euler(270, 0, 0));
+		Instantiate(backdropPrefab, new Vector3(0, 0, 2.5f), Quaternion.Euler(270, 0, 0));
+        Instantiate(backdropPrefab, new Vector3(0, 29, 2.5f), Quaternion.Euler(270, 0, 0));
 
 		//Instantiate(clearPrefab, new Vector3(0, 0, 0.5f), Quaternion.Euler(270, 0, 0));
 
@@ -111,8 +125,8 @@ public class GameManager : MonoBehaviour
         ///////////////////// Second level /////////////////////
 		Instantiate(wallPrefab, new Vector3(-20f, 40f, 0f), Quaternion.identity);
 		Instantiate(wallPrefab, new Vector3(20f, 40f, 0f), Quaternion.identity);
-		Instantiate(backdropPrefab, new Vector3(0, 29, 0.5f), Quaternion.Euler(270, 0, 0));
-		Instantiate(backdropPrefab, new Vector3(0, 58, 0.5f), Quaternion.Euler(270, 0, 0));
+		Instantiate(backdropPrefab, new Vector3(0, 29, 2.5f), Quaternion.Euler(270, 0, 0));
+		Instantiate(backdropPrefab, new Vector3(0, 58, 2.5f), Quaternion.Euler(270, 0, 0));
 		///////////////////// Row 1 //////////////////////////// 
         //Instantiate(platformPrefab, new Vector3(-9f, 34f, 0f), Quaternion.identity);
         Instantiate(platformPrefab, new Vector3(-5.75f, 34f, 0f), Quaternion.identity);
@@ -146,8 +160,8 @@ public class GameManager : MonoBehaviour
 		///////////////////// Third level /////////////////////
 		Instantiate(wallPrefab, new Vector3(-20f, 80f, 0f), Quaternion.identity);
 		Instantiate(wallPrefab, new Vector3(20f, 80f, 0f), Quaternion.identity);
-		Instantiate(backdropPrefab, new Vector3(0, 59, 0.5f), Quaternion.Euler(270, 0, 0));
-		Instantiate(backdropPrefab, new Vector3(0, 88, 0.5f), Quaternion.Euler(270, 0, 0));
+		Instantiate(backdropPrefab, new Vector3(0, 59, 2.5f), Quaternion.Euler(270, 0, 0));
+		Instantiate(backdropPrefab, new Vector3(0, 88, 2.5f), Quaternion.Euler(270, 0, 0));
 		///////////////////// Cage 1 ///////////////////////////
 		Instantiate(platformPrefab, new Vector3(-7.5f, 60f, 0f), Quaternion.Euler(0, 0, 90));
 		Instantiate(platformPrefab, new Vector3(-3f, 60f, 0f), Quaternion.Euler(0, 0, 90));
@@ -196,8 +210,8 @@ public class GameManager : MonoBehaviour
 		Instantiate(platformPrefab, new Vector3(1.5f, 87f, 0f), Quaternion.identity);
 
 		///////////////////// Fourth level /////////////////////
-		Instantiate(backdropPrefab, new Vector3(0, 83, 0.5f), Quaternion.Euler(270, 0, 0));
-		Instantiate(backdropPrefab, new Vector3(0, 114, 0.5f), Quaternion.Euler(270, 0, 0));
+		Instantiate(backdropPrefab, new Vector3(0, 83, 2.5f), Quaternion.Euler(270, 0, 0));
+		Instantiate(backdropPrefab, new Vector3(0, 114, 2.5f), Quaternion.Euler(270, 0, 0));
 		///////////////////// Row 1 ////////////////////////////
 		Instantiate(platformPrefab, new Vector3(9f, 90f, 0f), Quaternion.identity);
 		Instantiate(platformPrefab, new Vector3(4.75f, 90f, 0f), Quaternion.identity);
@@ -226,8 +240,8 @@ public class GameManager : MonoBehaviour
 		///////////////////// Fifth level /////////////////////
 		Instantiate(wallPrefab, new Vector3(-20f, 120f, 0f), Quaternion.identity);
 		Instantiate(wallPrefab, new Vector3(20f, 120f, 0f), Quaternion.identity);
-		Instantiate(backdropPrefab, new Vector3(0, 114, 0.5f), Quaternion.Euler(270, 0, 0));
-		Instantiate(backdropPrefab, new Vector3(0, 143, 0.5f), Quaternion.Euler(270, 0, 0));
+		Instantiate(backdropPrefab, new Vector3(0, 114, 2.5f), Quaternion.Euler(270, 0, 0));
+		Instantiate(backdropPrefab, new Vector3(0, 143, 2.5f), Quaternion.Euler(270, 0, 0));
 		///////////////////// Cage 1 ///////////////////////////
 		Instantiate(platformPrefab, new Vector3(3.75f, 123.25f, 0f), Quaternion.Euler(0, 0, 90));
 		Instantiate(platformPrefab, new Vector3(3.75f, 120f, 0f), Quaternion.Euler(0, 0, 90));

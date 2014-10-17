@@ -15,7 +15,7 @@ public class ReticleScript : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-		minMaxRange = new Vector3 (0.01f, 5.0f);
+		minMaxRange = new Vector3 (1.0f, 5.0f);
 		lightRangeSign = 1;
 
 		Light[] lights = gameObject.GetComponentsInChildren<Light> ();
