@@ -84,7 +84,7 @@ GameObject:
   - 4: {fileID: 109295411}
   - 114: {fileID: 109295410}
   - 114: {fileID: 109295412}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GameManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -104,6 +104,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerHealth: 0
+  player2Health: 0
 --- !u!4 &109295411
 Transform:
   m_ObjectHideFlags: 0
@@ -338,8 +339,12 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: bab9ac795588dad46a4ab097b91322ee, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: bab9ac795588dad46a4ab097b91322ee, type: 2}
+      propertyPath: loseSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 6e8105b848ed27f4996f9a0715734fe0, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bab9ac795588dad46a4ab097b91322ee, type: 2}
   m_RootGameObject: {fileID: 109295409}

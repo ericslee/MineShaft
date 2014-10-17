@@ -128,7 +128,7 @@ public class GameManager : MonoBehaviour
 		Instantiate(backdropPrefab, new Vector3(0, 29, 2.5f), Quaternion.Euler(270, 0, 0));
 		Instantiate(backdropPrefab, new Vector3(0, 58, 2.5f), Quaternion.Euler(270, 0, 0));
 		///////////////////// Row 1 //////////////////////////// 
-        //Instantiate(platformPrefab, new Vector3(-9f, 34f, 0f), Quaternion.identity);
+        Instantiate(platformPrefab, new Vector3(-9f, 34f, 0f), Quaternion.identity);
         Instantiate(platformPrefab, new Vector3(-5.75f, 34f, 0f), Quaternion.identity);
 		Instantiate(platformPrefab, new Vector3(-2.5f, 34f, 0f), Quaternion.identity);
 		Instantiate(platformPrefab, new Vector3(1.3f, 34f, 0f), Quaternion.identity);
@@ -137,7 +137,7 @@ public class GameManager : MonoBehaviour
 		///////////////////// Row 2 ////////////////////////////
 		Instantiate(platformPrefab, new Vector3(-2f, 42f, 0f), Quaternion.identity);
 		///////////////////// Row 3 ////////////////////////////
-		//Instantiate(platformPrefab, new Vector3(-9f, 46f, 0f), Quaternion.identity);
+		Instantiate(platformPrefab, new Vector3(-9f, 46f, 0f), Quaternion.identity);
 		Instantiate(platformPrefab, new Vector3(-5.25f, 46f, 0f), Quaternion.identity);
 		Instantiate(platformPrefab, new Vector3(-2f, 46f, 0f), Quaternion.identity);
 		Instantiate(platformPrefab, new Vector3(2f, 46f, 0f), Quaternion.identity);

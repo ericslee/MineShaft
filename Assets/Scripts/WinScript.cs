@@ -2,11 +2,11 @@
 using System.Collections;
 
 public class WinScript : MonoBehaviour {
-	
+	public AudioClip winSound;
 	private GUIStyle buttonStyle; 
 	// Use this for initialization 
 	void Start () {
-		
+		AudioSource.PlayClipAtPoint (winSound, transform.position);
 	} 
 	
 	// Update is called once per frame 
@@ -22,7 +22,7 @@ public class WinScript : MonoBehaviour {
 		// The scene needs to be added into build setting to be loaded! 
 		if (GUILayout.Button("New Game")) 
 		{ 
-			Application.LoadLevel("Level1"); 
+			Application.LoadLevel("Mine"); 
 		}
 		
 		if (GUILayout.Button("Exit")) 

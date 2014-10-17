@@ -19,7 +19,7 @@ public class FogScript : MonoBehaviour {
 		if (other.tag == "Player"){
 			PlayerController pc = other.GetComponent<PlayerController>();
 			if (pc){
-				pc.setHealth(pc.getHealth()-1);
+				//pc.setHealth(pc.getHealth()-1);
 			}
 			//gameManager.playerHealth -= 1;
 		}
