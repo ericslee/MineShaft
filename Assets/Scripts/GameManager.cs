@@ -25,11 +25,15 @@ public class GameManager : MonoBehaviour
     Object playerPrefab;
 	Object player2Prefab;
     Object platformPrefab;
+	Object debris1Prefab;
     Object groundPrefab;
     Object wallPrefab;
+	Object wallRightPrefab;
     Object newLevelTriggerPrefab;
     Object fogPrefab;
     Object backdropPrefab;
+
+	bool[] hasSpawnedFog;
 
     // references
     GameHUD hud;
@@ -43,8 +47,10 @@ public class GameManager : MonoBehaviour
 		//player2Prefab = Resources.Load("Characters/GravityMiner");
 		//playerPrefab = Resources.Load("Prefabs/Player");
 		platformPrefab = Resources.Load("Prefabs/Platform");
+		debris1Prefab = Resources.Load("Prefabs/Debris_1_Prefab");
         groundPrefab = Resources.Load("Prefabs/Ground");
-        wallPrefab = Resources.Load("Prefabs/Wall");
+        wallPrefab = Resources.Load("Prefabs/Wall2");
+		wallRightPrefab = Resources.Load("Prefabs/Wall2Right");
         newLevelTriggerPrefab = Resources.Load("Prefabs/NewLevelTrigger");
         fogPrefab = Resources.Load("Prefabs/FogParticleSystem");
         backdropPrefab = Resources.Load("Prefabs/Backdrop");
@@ -64,14 +70,33 @@ public class GameManager : MonoBehaviour
         SetUpLevel();
 
         CreateFog();
+
+		hasSpawnedFog = new bool[5];
+		hasSpawnedFog[0] = true;
+		hasSpawnedFog[1] = false;
+		hasSpawnedFog[2] = false;
+		hasSpawnedFog[3] = false;
+		hasSpawnedFog[4] = false;
     }
     
     void SetUpLevel()
     {
         ///////////////////// First level /////////////////////
-        Instantiate(groundPrefab, new Vector3(0f, -7f, 0f), Quaternion.identity);
-        Instantiate(wallPrefab, new Vector3(-20f, 0f, 0f), Quaternion.identity);
-        Instantiate(wallPrefab, new Vector3(20f, 0f, 0f), Quaternion.identity);
+		Instantiate(groundPrefab, new Vector3(0f, -7f, 0f), Quaternion.identity);
+		Instantiate(wallPrefab, new Vector3(-20.0f, 10f, 0f), Quaternion.Euler(270, 0, 0));
+		Instantiate(wallPrefab, new Vector3(-20.0f, 35f, 0f), Quaternion.Euler(270, 0, 0));
+		Instantiate(wallPrefab, new Vector3(-20.0f, 60f, 0f), Quaternion.Euler(270, 0, 0));
+		Instantiate(wallPrefab, new Vector3(-20.0f, 85f, 0f), Quaternion.Euler(270, 0, 0));
+		Instantiate(wallPrefab, new Vector3(-20.0f, 110f, 0f), Quaternion.Euler(270, 0, 0));
+		Instantiate(wallPrefab, new Vector3(-20.0f, 135f, 0f), Quaternion.Euler(270, 0, 0));
+
+		Instantiate(wallRightPrefab, new Vector3(20.0f, 10f, 0f), Quaternion.Euler(270, 0, 0));
+		Instantiate(wallRightPrefab, new Vector3(20.0f, 35f, 0f), Quaternion.Euler(270, 0, 0));
+		Instantiate(wallRightPrefab, new Vector3(20.0f, 60f, 0f), Quaternion.Euler(270, 0, 0));
+		Instantiate(wallRightPrefab, new Vector3(20.0f, 85f, 0f), Quaternion.Euler(270, 0, 0));
+		Instantiate(wallRightPrefab, new Vector3(20.0f, 110f, 0f), Quaternion.Euler(270, 0, 0));
+		Instantiate(wallRightPrefab, new Vector3(20.0f, 135f, 0f), Quaternion.Euler(270, 0, 0));
+		//Instantiate(wallPrefab, new Vector3(20f, 0f, 0f), Quaternion.Euler(270, 0, 0));
 
         Instantiate(platformPrefab, new Vector3(-6f, 0.2f, 0f), Quaternion.identity);
         Instantiate(platformPrefab, new Vector3(5f, 3.5f, 0f), Quaternion.identity);
@@ -82,8 +107,8 @@ public class GameManager : MonoBehaviour
         Instantiate(platformPrefab, new Vector3(-2f, 24f, 0f), Quaternion.identity);
         Instantiate(platformPrefab, new Vector3(5f, 27f, 0f), Quaternion.identity);
 
-		Instantiate(backdropPrefab, new Vector3(0, 0, 2.5f), Quaternion.Euler(270, 0, 0));
-        Instantiate(backdropPrefab, new Vector3(0, 29, 2.5f), Quaternion.Euler(270, 0, 0));
+		Instantiate(backdropPrefab, new Vector3(0, 0, 1.0f), Quaternion.Euler(270, 0, 0));
+        Instantiate(backdropPrefab, new Vector3(0, 29, 1.0f), Quaternion.Euler(270, 0, 0));
 
 		//Instantiate(clearPrefab, new Vector3(0, 0, 0.5f), Quaternion.Euler(270, 0, 0));
 
@@ -121,8 +146,8 @@ public class GameManager : MonoBehaviour
         levelTriggers[7].GetComponent<LevelControl>().SetCameraPosition(new Vector3(0f, 134f, -30f));
 
         ///////////////////// Second level /////////////////////
-		Instantiate(wallPrefab, new Vector3(-20f, 40f, 0f), Quaternion.identity);
-		Instantiate(wallPrefab, new Vector3(20f, 40f, 0f), Quaternion.identity);
+		//Instantiate(wallPrefab, new Vector3(-20f, 40f, 0f), Quaternion.identity);
+		//Instantiate(wallPrefab, new Vector3(20f, 40f, 0f), Quaternion.identity);
 		Instantiate(backdropPrefab, new Vector3(0, 29, 2.5f), Quaternion.Euler(270, 0, 0));
 		Instantiate(backdropPrefab, new Vector3(0, 58, 2.5f), Quaternion.Euler(270, 0, 0));
 		///////////////////// Row 1 //////////////////////////// 
@@ -156,14 +181,14 @@ public class GameManager : MonoBehaviour
 		Instantiate(platformPrefab, new Vector3(1.75f, 59f, 0f), Quaternion.identity);
 
 		///////////////////// Third level /////////////////////
-		Instantiate(wallPrefab, new Vector3(-20f, 80f, 0f), Quaternion.identity);
-		Instantiate(wallPrefab, new Vector3(20f, 80f, 0f), Quaternion.identity);
+		//Instantiate(wallPrefab, new Vector3(-20f, 80f, 0f), Quaternion.identity);
+		//Instantiate(wallPrefab, new Vector3(20f, 80f, 0f), Quaternion.identity);
 		Instantiate(backdropPrefab, new Vector3(0, 59, 2.5f), Quaternion.Euler(270, 0, 0));
 		Instantiate(backdropPrefab, new Vector3(0, 88, 2.5f), Quaternion.Euler(270, 0, 0));
 		///////////////////// Cage 1 ///////////////////////////
-		Instantiate(platformPrefab, new Vector3(-7.5f, 60f, 0f), Quaternion.Euler(0, 0, 90));
-		Instantiate(platformPrefab, new Vector3(-3f, 60f, 0f), Quaternion.Euler(0, 0, 90));
-		Instantiate(platformPrefab, new Vector3(3.75f, 60f, 0f), Quaternion.Euler(0, 0, 90));
+		Instantiate(platformPrefab, new Vector3(-7.5f, 60f, 0f), Quaternion.Euler(0, 0, 0));
+		Instantiate(platformPrefab, new Vector3(-3f, 60f, 0f), Quaternion.Euler(0, 0, 0));
+		Instantiate(platformPrefab, new Vector3(3.75f, 60f, 0f), Quaternion.Euler(0, 0, 0));
 		Instantiate(platformPrefab, new Vector3(-9.5f, 63f, 0f), Quaternion.identity);
 		Instantiate(platformPrefab, new Vector3(-5f, 63f, 0f), Quaternion.identity);
 		Instantiate(platformPrefab, new Vector3(-1.75f, 63f, 0f), Quaternion.identity);
@@ -236,8 +261,8 @@ public class GameManager : MonoBehaviour
 		Instantiate(platformPrefab, new Vector3(9f, 120f, 0f), Quaternion.identity);
 
 		///////////////////// Fifth level /////////////////////
-		Instantiate(wallPrefab, new Vector3(-20f, 120f, 0f), Quaternion.identity);
-		Instantiate(wallPrefab, new Vector3(20f, 120f, 0f), Quaternion.identity);
+		//Instantiate(wallPrefab, new Vector3(-20f, 120f, 0f), Quaternion.identity);
+		//Instantiate(wallPrefab, new Vector3(20f, 120f, 0f), Quaternion.identity);
 		Instantiate(backdropPrefab, new Vector3(0, 114, 2.5f), Quaternion.Euler(270, 0, 0));
 		Instantiate(backdropPrefab, new Vector3(0, 143, 2.5f), Quaternion.Euler(270, 0, 0));
 		///////////////////// Cage 1 ///////////////////////////
@@ -330,6 +355,12 @@ public class GameManager : MonoBehaviour
 
         // move camera
         iTween.MoveTo(Camera.main.gameObject, cameraPos, 1.0f);
+		//spawn a new fog thing!
+		if (level == 2 && !hasSpawnedFog[level-1]) Instantiate(fogPrefab, new Vector3(10.0f, 35.0f, 0f), Quaternion.identity);
+		else if (level == 3 && !hasSpawnedFog[level-1]) Instantiate(fogPrefab, new Vector3(-10.0f, 35.0f, 0f), Quaternion.identity);
+		else if (level == 4 && !hasSpawnedFog[level-1]) Instantiate(fogPrefab, new Vector3(10.0f, 90.0f, 0f), Quaternion.identity);
+		else if (level == 5 && !hasSpawnedFog[level-1]) Instantiate(fogPrefab, new Vector3(0.0f, 120.0f, 0f), Quaternion.identity);
+		hasSpawnedFog[level-1] = true;
     }
 
     public void Win()

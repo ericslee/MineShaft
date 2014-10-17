@@ -7,7 +7,7 @@ public class FogScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		gameManager = GetComponent<GameManager>();
+		gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
 	}
 	
 	// Update is called once per frame
@@ -17,7 +17,7 @@ public class FogScript : MonoBehaviour {
 	void OnParticleCollision(GameObject other) {
 		if (other.tag == "Player"){
 			PlayerController pc = gameManager.GetActivePlayer();
-			//pc.setHealth(pc.getHealth()-1);
+			pc.setHealth(pc.getHealth()-1);
 		}
 	}
 }
