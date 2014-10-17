@@ -161,7 +161,17 @@ public class PlayerController : MonoBehaviour
             // Move reticle with mouse
             Vector3 pos = Input.mousePosition;
             pos.z = transform.position.z - Camera.main.transform.position.z;
-            targetingReticle.transform.position = Camera.main.ScreenToWorldPoint(pos);
+            Vector3 newReticlePos = Camera.main.ScreenToWorldPoint(pos);
+
+            // clip x and y positions if necessary
+            if (newReticlePos.x < -10.2f) 
+                newReticlePos.x = -10.2f; 
+            else if (newReticlePos.x > 10.2f)
+                newReticlePos.x = 10.2f;
+            if (newReticlePos.y < -2f)
+                newReticlePos.y = -2f;
+
+            targetingReticle.transform.position = newReticlePos;
 
             // Click to fire gun
             if (Input.GetMouseButtonDown(0))
