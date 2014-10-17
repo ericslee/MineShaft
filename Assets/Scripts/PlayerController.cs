@@ -7,7 +7,8 @@ public enum GunType {PlatformGun, GravityGun};
 public class PlayerController : MonoBehaviour
 {
 	//Sound
-	public AudioClip jumpSound;//=  Resources.Load("MineShaft/Assets/Sounds/hop.wav") as AudioClip;
+	AudioClip jumpSound;//=  Resources.Load("MineShaft/Assets/Sounds/hop.wav") as AudioClip;
+    AudioSource jumpSource;
 
     // Controls
     float distToGround;
@@ -42,6 +43,9 @@ public class PlayerController : MonoBehaviour
         platformPrefab = Resources.Load("Prefabs/Platform");
         gravityCenterPrefab = Resources.Load("Prefabs/GravityCenter");
         targetingReticlePrefab = Resources.Load("Prefabs/Reticle");
+
+        // set up sounds
+        jumpSource = GetComponents<AudioSource>()[0];
 
         // get distance to ground
         distToGround = collider.bounds.extents.y;
@@ -125,7 +129,7 @@ public class PlayerController : MonoBehaviour
             {
                 animation.Play("jump");
                 rigidbody.velocity = new Vector3(0, 9, 0);
-                AudioSource.PlayClipAtPoint(jumpSound, transform.position);
+                jumpSource.Play();
             }
             transform.rotation = rotation;
         }
