@@ -234,6 +234,10 @@ public class PlayerController : MonoBehaviour
         {
             collidingWall = true;
         }
+        else if (collision.gameObject.tag.Equals("Enemy"))
+        {
+            Debug.Log("hit player");
+        }
     }
 
     void OnCollisionExit()

@@ -25,6 +25,7 @@ public class GameManager : MonoBehaviour
     Object newLevelTriggerPrefab;
     Object fogPrefab;
     Object backdropPrefab;
+    Object enemyPrefab;
 
     // references
     GameHUD hud;
@@ -34,13 +35,13 @@ public class GameManager : MonoBehaviour
     {
         // Cache references
         playerPrefab = Resources.Load("Characters/PlatformMiner");
-		//playerPrefab = Resources.Load("Prefabs/Player");
 		platformPrefab = Resources.Load("Prefabs/Platform");
         groundPrefab = Resources.Load("Prefabs/Ground");
         wallPrefab = Resources.Load("Prefabs/Wall");
         newLevelTriggerPrefab = Resources.Load("Prefabs/NewLevelTrigger");
         fogPrefab = Resources.Load("Prefabs/FogParticleSystem");
         backdropPrefab = Resources.Load("Prefabs/Backdrop");
+        enemyPrefab = Resources.Load("Prefabs/Enemy");
         hud = GetComponent<GameHUD>();
 
         // Instantiate player at start of level 1
@@ -50,7 +51,7 @@ public class GameManager : MonoBehaviour
         currentLevel = 1;
 
         SetUpLevel();
-
+        AddEnemies();
         CreateFog();
     }
     
@@ -297,6 +298,11 @@ public class GameManager : MonoBehaviour
     void CreateFog()
     {
         Instantiate(fogPrefab, new Vector3(0f, -10f, 0f), Quaternion.identity);
+    }
+
+    void AddEnemies()
+    {
+        Instantiate(enemyPrefab, new Vector3(9f, 10f, 0f), Quaternion.identity);
     }
     
     // Update is called once per frame
