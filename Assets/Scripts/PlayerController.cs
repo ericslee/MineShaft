@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
 
 	public float jumpHeight;
 	public int health;
+    public int invincibilityFrames;
 
 	//Sound
     AudioSource jumpSource;
@@ -61,6 +62,8 @@ public class PlayerController : MonoBehaviour
 
         currentGun = GunType.PlatformGun;
 
+        invincibilityFrames = 0;
+
         // do not allow collisions between reticle and certain objects that should be not be selectable for gravity center effects
         Physics.IgnoreLayerCollision(8, 9, true);
 
@@ -72,6 +75,8 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         if (m_isActive) HandleInput();
+
+        invincibilityFrames++;
     }
 
     void HandleInput()
@@ -226,16 +231,18 @@ public class PlayerController : MonoBehaviour
         {
             collidingWall = true;
         }
-        else if (collision.gameObject.tag.Equals("Enemy"))
+        else if (invincibilityFrames > 100 && collision.gameObject.tag.Equals("Enemy"))
         {
             // damage and knock back
             setHealth(getHealth() - 10);
             Vector3 knockbackForce;
             if (gameObject.GetComponent<Rigidbody>().velocity.x < 0)
-                knockbackForce = new Vector3(-200, 200, 0);
+                knockbackForce = new Vector3(-600, 600, 0);
             else
-                knockbackForce = new Vector3(200, 200, 0);
+                knockbackForce = new Vector3(600, 600, 0);
             gameObject.GetComponent<Rigidbody>().AddForce(knockbackForce);
+
+            invincibilityFrames = 0;
 
             takeDamageSource.Play();
         }
