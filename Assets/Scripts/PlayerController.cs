@@ -11,8 +11,8 @@ public class PlayerController : MonoBehaviour
 	public int health;
 
 	//Sound
-	AudioClip jumpSound;//=  Resources.Load("MineShaft/Assets/Sounds/hop.wav") as AudioClip;
     AudioSource jumpSource;
+    AudioSource takeDamageSource;
 
     // Controls
     float distToGround;
@@ -50,6 +50,7 @@ public class PlayerController : MonoBehaviour
 
         // set up sounds
         jumpSource = GetComponents<AudioSource>()[0];
+        takeDamageSource = GetComponents<AudioSource>()[1];
 
         // get distance to ground
         distToGround = collider.bounds.extents.y;
@@ -227,7 +228,16 @@ public class PlayerController : MonoBehaviour
         }
         else if (collision.gameObject.tag.Equals("Enemy"))
         {
-            Debug.Log("hit player");
+            // damage and knock back
+            setHealth(getHealth() - 10);
+            Vector3 knockbackForce;
+            if (gameObject.GetComponent<Rigidbody>().velocity.x < 0)
+                knockbackForce = new Vector3(-200, 200, 0);
+            else
+                knockbackForce = new Vector3(200, 200, 0);
+            gameObject.GetComponent<Rigidbody>().AddForce(knockbackForce);
+
+            takeDamageSource.Play();
         }
     }
 
