@@ -47,7 +47,7 @@ public class GameManager : MonoBehaviour
         playerPrefab = Resources.Load("Characters/PlatformMiner");
 		//player2Prefab = Resources.Load("Characters/GravityMiner");
 		platformPrefab = Resources.Load("Prefabs/Platform");
-		debris1Prefab = Resources.Load("Prefabs/Debris_1_Prefab");
+		debris1Prefab = Resources.Load("Prefabs/Debris");
         groundPrefab = Resources.Load("Prefabs/Ground");
         wallPrefab = Resources.Load("Prefabs/Wall2");
 		wallRightPrefab = Resources.Load("Prefabs/Wall2Right");
@@ -172,32 +172,31 @@ public class GameManager : MonoBehaviour
 	void SpawnLevel3(){
 		///////////////////// Third level /////////////////////
 		///////////////////// Cage 1 ///////////////////////////
-		SpawnPlatform(new Vector3(-7.5f, 60f, 0f));
-		SpawnPlatform(new Vector3(-3f, 60f, 0f));
-		SpawnPlatform(new Vector3(3.75f, 60f, 0f));
+		Instantiate(platformPrefab, new Vector3(-7.5f, 60f, 0f), Quaternion.Euler(0, 0, 45));
+		Instantiate(platformPrefab, new Vector3(-3f, 60f, 0f), Quaternion.Euler(0, 0, -70));
+		Instantiate(platformPrefab, new Vector3(3.75f, 60f, 0f), Quaternion.Euler(0, 0, 30));
 		SpawnPlatform(new Vector3(-9.5f, 63f, 0f));
 		SpawnPlatform(new Vector3(-5f, 63f, 0f));
 		SpawnPlatform(new Vector3(-1.75f, 63f, 0f));
 		SpawnPlatform(new Vector3(1.5f, 63f, 0f));
 		SpawnPlatform(new Vector3(5.75f, 63f, 0f));
 		SpawnPlatform(new Vector3(9f, 63f, 0f));
+		Instantiate(debris1Prefab, new Vector3(9.0f, 63.0f, 0f), Quaternion.identity);
+		Instantiate(debris1Prefab, new Vector3(4.0f, 63.0f, 0f), Quaternion.identity);
+		Instantiate(debris1Prefab, new Vector3(-2.0f, 63.0f, 0f), Quaternion.identity);
+		Instantiate(debris1Prefab, new Vector3(-10.0f, 63.0f, 0f), Quaternion.identity);
 		///////////////////// Cage 2 ///////////////////////////
-		SpawnPlatform(new Vector3(9f, 67f, 0f));
-		SpawnPlatform(new Vector3(4f, 67f, 0f));
-		SpawnPlatform(new Vector3(-2f, 67f, 0f));
-		SpawnPlatform(new Vector3(-10f, 67f, 0f));
-		SpawnPlatform(new Vector3(9f, 70f, 0f));
 		SpawnPlatform(new Vector3(4.75f, 70f, 0f));
 		SpawnPlatform(new Vector3(1.5f, 70f, 0f));
 		SpawnPlatform(new Vector3(-2.5f, 70f, 0f));
 		SpawnPlatform(new Vector3(-5.75f, 70f, 0f));
 		SpawnPlatform(new Vector3(-10.25f, 70f, 0f));
+		Instantiate(debris1Prefab, new Vector3(-9.5f, 70.0f, 0f), Quaternion.identity);
+		Instantiate(debris1Prefab, new Vector3(-0.5f, 70.0f, 0f), Quaternion.identity);
+		Instantiate(debris1Prefab, new Vector3(-0.25f, 70.0f, 0f), Quaternion.identity);
+		Instantiate(debris1Prefab, new Vector3(4.5f, 70.0f, 0f), Quaternion.identity);
+		Instantiate(debris1Prefab, new Vector3(7.75f, 70.0f, 0f), Quaternion.identity);
 		///////////////////// Cage 3 ///////////////////////////
-		SpawnPlatform(new Vector3(-9.5f, 74f, 0f));
-		SpawnPlatform(new Vector3(-5f, 74f, 0f));
-		SpawnPlatform(new Vector3(-0.25f, 74f, 0f));
-		SpawnPlatform(new Vector3(4.5f, 74f, 0f));
-		SpawnPlatform(new Vector3(7.75f, 74f, 0f));
 		SpawnPlatform(new Vector3(-9.5f, 77f, 0f));
 		SpawnPlatform(new Vector3(-6.25f, 77f, 0f));
 		SpawnPlatform(new Vector3(-3f, 77f, 0f));
@@ -205,10 +204,10 @@ public class GameManager : MonoBehaviour
 		SpawnPlatform(new Vector3(2.5f, 77f, 0f));
 		SpawnPlatform(new Vector3(5.75f, 77f, 0f));
 		SpawnPlatform(new Vector3(9f, 77f, 0f));
+		Instantiate(debris1Prefab, new Vector3(-7.5f, 77.0f, 0f), Quaternion.identity);
+		Instantiate(debris1Prefab, new Vector3(-3.0f, 77.0f, 0f), Quaternion.identity);
+		Instantiate(debris1Prefab, new Vector3(3.75f, 77.0f, 0f), Quaternion.identity);
 		///////////////////// Cage 4 ///////////////////////////
-		SpawnPlatform(new Vector3(-7.5f, 81f, 0f));
-		SpawnPlatform(new Vector3(-3f, 81f, 0f));
-		SpawnPlatform(new Vector3(3.75f, 81f, 0f));
 		SpawnPlatform(new Vector3(-9.5f, 84f, 0f));
 		SpawnPlatform(new Vector3(-5f, 84f, 0f));
 		SpawnPlatform(new Vector3(-1.75f, 84f, 0f));
@@ -251,8 +250,8 @@ public class GameManager : MonoBehaviour
 
 		///////////////////// Fifth level /////////////////////
 		///////////////////// Cage 1 ///////////////////////////
-		SpawnPlatform(new Vector3(3.75f, 123.25f, 0f));
-		SpawnPlatform(new Vector3(3.75f, 120f, 0f));
+		Instantiate(platformPrefab, new Vector3(3.75f, 123.25f, 0f), Quaternion.Euler(0, 0, 90));
+		Instantiate(platformPrefab, new Vector3(3.75f, 120f, 0f), Quaternion.Euler(0, 0, 90));
 		SpawnPlatform(new Vector3(-9f, 120f, 0f));
 		SpawnPlatform(new Vector3(-5.75f, 120f, 0f));
 		SpawnPlatform(new Vector3(-2.5f, 120f, 0f));
@@ -264,15 +263,15 @@ public class GameManager : MonoBehaviour
 		SpawnPlatform(new Vector3(6.75f, 130f, 0f));
 		SpawnPlatform(new Vector3(10f, 130f, 0f));
 		///////////////////// Cage 2 ///////////////////////////
-		SpawnPlatform(new Vector3(9f, 128f, 0f));
-		SpawnPlatform(new Vector3(7f, 128f, 0f));
-		SpawnPlatform(new Vector3(4f, 128f, 0f));
-		SpawnPlatform(new Vector3(2f, 128f, 0f));
-		SpawnPlatform(new Vector3(0.5f, 128f, 0f));
-		SpawnPlatform(new Vector3(-2f, 128f, 0f));
-		SpawnPlatform(new Vector3(-4f, 128f, 0f));
-		SpawnPlatform(new Vector3(-7f, 128f, 0f));
-		SpawnPlatform(new Vector3(-10f, 128f, 0f));
+		Instantiate(platformPrefab, new Vector3(9f, 128f, 0f), Quaternion.Euler(0, 0, 90));
+		Instantiate(platformPrefab, new Vector3(7f, 128f, 0f), Quaternion.Euler(0, 0, 90));
+		Instantiate(platformPrefab, new Vector3(4f, 128f, 0f), Quaternion.Euler(0, 0, 90));
+		Instantiate(platformPrefab, new Vector3(2f, 128f, 0f), Quaternion.Euler(0, 0, 90));
+		Instantiate(platformPrefab, new Vector3(0.5f, 128f, 0f), Quaternion.Euler(0, 0, 90));
+		Instantiate(platformPrefab, new Vector3(-2f, 128f, 0f), Quaternion.Euler(0, 0, 90));
+		Instantiate(platformPrefab, new Vector3(-4f, 128f, 0f), Quaternion.Euler(0, 0, 90));
+		Instantiate(platformPrefab, new Vector3(-7f, 128f, 0f), Quaternion.Euler(0, 0, 90));
+		Instantiate(platformPrefab, new Vector3(-10f, 128f, 0f), Quaternion.Euler(0, 0, 90));
 		SpawnPlatform(new Vector3(-9.5f, 126f, 0f));
 		SpawnPlatform(new Vector3(-6.25f, 126f, 0f));
 		SpawnPlatform(new Vector3(-3f, 126f, 0f));
@@ -290,16 +289,16 @@ public class GameManager : MonoBehaviour
 		SpawnPlatform(new Vector3(5.75f, 140f, 0f));
 		SpawnPlatform(new Vector3(9f, 140f, 0f));
 		///////////////////// Cage 4 ///////////////////////////
-		SpawnPlatform(new Vector3(-10f, 142f, 0f));
-		SpawnPlatform(new Vector3(-7.5f, 142f, 0f));
-		SpawnPlatform(new Vector3(-5f, 142f, 0f));
-		SpawnPlatform(new Vector3(-3.5f, 142f, 0f));
-		SpawnPlatform(new Vector3(-1f, 142f, 0f));
-		SpawnPlatform(new Vector3(-1.75f, 142f, 0f));
-		SpawnPlatform(new Vector3(1f, 142f, 0f));
-		SpawnPlatform(new Vector3(3f, 142f, 0f));
-		SpawnPlatform(new Vector3(5.5f, 142f, 0f));
-		SpawnPlatform(new Vector3(7f, 142f, 0f));
+		Instantiate(platformPrefab, new Vector3(-10f, 142f, 0f), Quaternion.Euler(0, 0, 90));
+		Instantiate(platformPrefab, new Vector3(-7.5f, 142f, 0f), Quaternion.Euler(0, 0, 90));
+		Instantiate(platformPrefab, new Vector3(-5f, 142f, 0f), Quaternion.Euler(0, 0, 90));
+		Instantiate(platformPrefab, new Vector3(-3.5f, 142f, 0f), Quaternion.Euler(0, 0, 90));
+		Instantiate(platformPrefab, new Vector3(-1f, 142f, 0f), Quaternion.Euler(0, 0, 90));
+		Instantiate(platformPrefab, new Vector3(-1.75f, 142f, 0f), Quaternion.Euler(0, 0, 90));
+		Instantiate(platformPrefab, new Vector3(1f, 142f, 0f), Quaternion.Euler(0, 0, 90));
+		Instantiate(platformPrefab, new Vector3(3f, 142f, 0f), Quaternion.Euler(0, 0, 90));
+		Instantiate(platformPrefab, new Vector3(5.5f, 142f, 0f), Quaternion.Euler(0, 0, 90));
+		Instantiate(platformPrefab, new Vector3(7f, 142f, 0f), Quaternion.Euler(0, 0, 90));
 		SpawnPlatform(new Vector3(-9.5f, 144f, 0f));
 		SpawnPlatform(new Vector3(-5f, 144f, 0f));
 		SpawnPlatform(new Vector3(-1.75f, 144f, 0f));

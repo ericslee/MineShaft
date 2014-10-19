@@ -51,7 +51,8 @@ public class ReticleScript : MonoBehaviour
     {
 		if (gameManager.GetActivePlayer().GetGunType().Equals(GunType.GravityGun)) 
         {
-			gameManager.GetActivePlayer().AddToGravityList(other.gameObject);
+			//check if other is within the gravity's pull
+			//gameManager.GetActivePlayer().AddToGravityList(other.gameObject);
         }
     }
 }

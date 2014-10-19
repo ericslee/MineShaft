@@ -33,7 +33,9 @@ public class PlayerController : MonoBehaviour
     // Gravity gun
     Object gravityCenterPrefab;
     GameObject currentActiveGravityCenter;
+	GravityCenterScript gravityScript;
     HashSet<GameObject> gravityTargets = new HashSet<GameObject>(); // set of objects to be affected by gravity
+	float gravityRange;
 
 	Quaternion frontRotation;
 	Quaternion leftRotation;
@@ -76,6 +78,10 @@ public class PlayerController : MonoBehaviour
     {
         if (m_isActive) HandleInput();
 
+		if (currentActiveGravityCenter){
+		gravityScript.SetGravityPlaneMax(gravityScript.GetAbsMaxScale() * ((float)health+10.0f)/100.0f);
+		}
+
         invincibilityFrames++;
     }
 
@@ -108,7 +114,7 @@ public class PlayerController : MonoBehaviour
                 transform.rotation = leftRotation;
             }
             else if (animation.IsPlaying("walking")){
-                animation.Stop();
+                //animation.Stop();
             }
         }
         
@@ -207,6 +213,7 @@ public class PlayerController : MonoBehaviour
                         Destroy(currentActiveGravityCenter);
                     }
                     currentActiveGravityCenter = (GameObject)Instantiate(gravityCenterPrefab, targetingReticle.transform.position, Quaternion.Euler(0, 90, 0));
+					gravityScript = currentActiveGravityCenter.GetComponent<GravityCenterScript>();
                 }  
             }
         }
@@ -222,7 +229,6 @@ public class PlayerController : MonoBehaviour
             || (Physics.Raycast(leftBound, -Vector3.up, distToGround + 0.1f))
             || (Physics.Raycast(rightBound, -Vector3.up, distToGround + 0.1f)));
     }
-
 
     void OnCollisionEnter(Collision collision)
     { 
@@ -287,4 +293,7 @@ public class PlayerController : MonoBehaviour
         return currentGun;
     }
 
+	public float GetGravityRange(){
+		return gravityRange;
+	}
 }
