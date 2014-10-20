@@ -1,0 +1,68 @@
+Initialize engine version: 4.5.3f3 (fca41a4fabea)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GT 750M      (ID=0xfe4)
+    Vendor:   NVIDIA
+    VRAM:     1988 MB
+Default GameObject Tag: Player already registered
+ 
+(Filename:  Line: 66)
+
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\Samantha\Documents\GitHub\MineShaft\MineShaft3_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\Samantha\Documents\GitHub\MineShaft\MineShaft3_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\Samantha\Documents\GitHub\MineShaft\MineShaft3_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading C:\Users\Samantha\Documents\GitHub\MineShaft\MineShaft3_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: C:\Users\Samantha\Documents\GitHub\MineShaft\MineShaft3_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\Samantha\Documents\GitHub\MineShaft\MineShaft3_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+- Completed reload, in  0.066 seconds
+desktop: 3200x1800 60Hz; virtual: 3200x1800 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+Platform assembly: C:\Users\Samantha\Documents\GitHub\MineShaft\MineShaft3_Data\Managed\System.Core.dll (this message is harmless)
+UnloadTime: 0.251460 ms
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 110.
+Total: 0.526246 ms (FindLiveObjects: 0.009330 ms CreateObjectMapping: 0.006064 ms MarkObjects: 0.093772 ms  DeleteObjects: 0.013995 ms)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at FogScript.OnParticleCollision (UnityEngine.GameObject other) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at FogScript.OnParticleCollision (UnityEngine.GameObject other) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at FogScript.OnParticleCollision (UnityEngine.GameObject other) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnloadTime: 7.512079 ms
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 319 unused Assets to reduce memory usage. Loaded Objects now: 116.
+Total: 0.879410 ms (FindLiveObjects: 0.012596 ms CreateObjectMapping: 0.008397 ms MarkObjects: 0.084908 ms  DeleteObjects: 0.388620 ms)
+
+UnloadTime: 0.207139 ms
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 110.
+Total: 0.415678 ms (FindLiveObjects: 0.004198 ms CreateObjectMapping: 0.005598 ms MarkObjects: 0.076977 ms  DeleteObjects: 0.002332 ms)
+
+UnloadTime: 0.214137 ms
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 116.
+Total: 0.459999 ms (FindLiveObjects: 0.004198 ms CreateObjectMapping: 0.005598 ms MarkObjects: 0.100770 ms  DeleteObjects: 0.017728 ms)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at ReticleScript.OnTriggerEnter (UnityEngine.Collider other) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+Platform assembly: C:\Users\Samantha\Documents\GitHub\MineShaft\MineShaft3_Data\Managed\System.dll (this message is harmless)
