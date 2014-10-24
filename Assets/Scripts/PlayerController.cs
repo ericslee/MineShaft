@@ -30,6 +30,7 @@ public class PlayerController : MonoBehaviour
 
     // Platform gun
     Object platformPrefab;
+    Object playerPlatformPrefab;
     GameObject currentActivePlatform;
 
     // Gravity gun
@@ -50,6 +51,7 @@ public class PlayerController : MonoBehaviour
     {
         // cache references
         platformPrefab = Resources.Load("Prefabs/Platform");
+        playerPlatformPrefab = Resources.Load("Prefabs/PlayerPlatform");
         gravityCenterPrefab = Resources.Load("Prefabs/GravityCenter");
         targetingReticlePrefab = Resources.Load("Prefabs/Reticle");
 
@@ -241,7 +243,7 @@ public class PlayerController : MonoBehaviour
                     platformPosition.y += randomOffsetY*range;
                     
                     currentActivePlatform = 
-                        (GameObject)Instantiate(platformPrefab, platformPosition, Quaternion.identity);
+                        (GameObject)Instantiate(playerPlatformPrefab, platformPosition, Quaternion.identity);
                     
                 }
                 else if (currentGun.Equals(GunType.GravityGun))
