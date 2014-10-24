@@ -6,6 +6,8 @@ public enum GunType {PlatformGun, GravityGun};
 
 public class PlayerController : MonoBehaviour
 {
+	//Pause Menu
+	bool pause = false;
 
 	public float jumpHeight;
 	public int health;
@@ -28,6 +30,7 @@ public class PlayerController : MonoBehaviour
 
     // Platform gun
     Object platformPrefab;
+    Object playerPlatformPrefab;
     GameObject currentActivePlatform;
 
     // Gravity gun
@@ -48,6 +51,7 @@ public class PlayerController : MonoBehaviour
     {
         // cache references
         platformPrefab = Resources.Load("Prefabs/Platform");
+        playerPlatformPrefab = Resources.Load("Prefabs/PlayerPlatform");
         gravityCenterPrefab = Resources.Load("Prefabs/GravityCenter");
         targetingReticlePrefab = Resources.Load("Prefabs/Reticle");
 
@@ -87,9 +91,46 @@ public class PlayerController : MonoBehaviour
 
     void HandleInput()
     {
+		HandleMisc ();
         HandleMovement();
         HandleGunControls(); 
     }
+
+	void HandleMisc() {
+		if (Input.GetKey (KeyCode.Escape)) {
+			Application.Quit();
+			Debug.Log ("Application.Quit() only works in build, not in editor"); 
+		}
+		if (Input.GetKey(KeyCode.P)){//Input.GetKey ("p") || Input.GetKey("P")) {
+			pause = !pause;
+			//Application.Quit();
+		}
+		if (pause) {
+			Time.timeScale = 0;
+			GUI.Box(new Rect(425, 150, 175, 425),"Paused");
+			//GUILayout.BeginArea(new Rect(425, 150, 175, 425));
+			
+			if (GUILayout.Button("Resume Game")) 
+			{ 
+				pause = false;
+			}
+			
+			if (GUILayout.Button("New Game")) 
+			{ 
+				Application.LoadLevel("Mine"); 
+			}
+					
+			if (GUILayout.Button("Exit")) 
+			{ 
+				Application.Quit(); 
+				Debug.Log ("Application.Quit() only works in build, not in editor"); 
+			}
+			//GUILayout.EndArea(); 
+		}
+		if(!pause) {
+			Time.timeScale = 1;
+		}
+	}
 
     void HandleMovement()
     {
@@ -124,7 +165,7 @@ public class PlayerController : MonoBehaviour
             Quaternion rotation = transform.rotation;
             transform.rotation = Quaternion.identity;
             collidingWall = false;
-            if (Input.GetKeyDown(KeyCode.Space) /*|| Input.GetKeyDown(KeyCode.UpArrow)*/)
+            if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.W))
             {
                 animation.Play("jump");
                 rigidbody.velocity = new Vector3(0, jumpHeight, 0);
@@ -234,7 +275,7 @@ public class PlayerController : MonoBehaviour
                     platformPosition.y += randomOffsetY*range;
                     
                     currentActivePlatform = 
-                        (GameObject)Instantiate(platformPrefab, platformPosition, Quaternion.identity);
+                        (GameObject)Instantiate(playerPlatformPrefab, platformPosition, Quaternion.identity);
                     
                 }
                 else if (currentGun.Equals(GunType.GravityGun))

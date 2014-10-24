@@ -32,7 +32,6 @@ public class GravityCenterScript : MonoBehaviour {
 	}
 
 	public void SetGravityPlaneMax(float newMax){
-		Debug.Log(newMax);
 		gravityPlaneMinMaxScale.y = newMax;
 	}
 
