@@ -29,7 +29,6 @@ public class ReticleScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-		//transform.localScale;// += new Vector3(0.0f, 0.1f, 0.1f);
 		Light[] lights = gameObject.GetComponentsInChildren<Light> ();
 		if (gameManager.GetActivePlayer().GetGunType().Equals(GunType.GravityGun)) 
         {

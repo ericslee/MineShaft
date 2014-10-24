@@ -174,6 +174,38 @@ public class PlayerController : MonoBehaviour
             if (newReticlePos.y < -2f)
                 newReticlePos.y = -2f;
 
+			float heightBase = transform.position.y+transform.localScale.y;
+			float maxWidth = 7.5f;
+			float minHeight = 0, maxHeight = 0.5f;
+
+			float minX = -1000, maxX = 1000;
+			if (transform.rotation == rightRotation){
+				minX = transform.position.x;
+				maxX = transform.position.x + maxWidth;
+			}
+			else{
+				minX = transform.position.x - maxWidth;
+				maxX = transform.position.x;
+			}
+
+			if (newReticlePos.x < minX){
+				newReticlePos.x = minX;
+			}
+			if (newReticlePos.x > maxX){
+				newReticlePos.x = maxX;
+			}
+
+			float xDiff = Mathf.Abs(newReticlePos.x - transform.position.x);
+
+			float heightAtX = minHeight*(1-xDiff) + maxHeight*xDiff;
+
+			if(newReticlePos.y > heightBase + heightAtX){
+				newReticlePos.y = heightBase + heightAtX;
+			}
+			else if(newReticlePos.y < heightBase - heightAtX){
+				newReticlePos.y = heightBase - heightAtX;
+			}
+
             targetingReticle.transform.position = newReticlePos;
 
             // Click to fire gun

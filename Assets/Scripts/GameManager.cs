@@ -363,7 +363,7 @@ public class GameManager : MonoBehaviour
 
     void CreateFog()
     {
-        Instantiate(fogPrefab, new Vector3(0f, -10f, 0f), Quaternion.identity);
+        //Instantiate(fogPrefab, new Vector3(0f, -10f, 0f), Quaternion.identity);
     }
 
     void AddEnemies()
