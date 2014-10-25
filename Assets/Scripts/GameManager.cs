@@ -98,7 +98,7 @@ public class GameManager : MonoBehaviour
 	}
 
 	void SpawnMine(){
-		Instantiate(groundPrefab, new Vector3(0f, -7f, 0f), Quaternion.identity);
+		Instantiate(groundPrefab, new Vector3(7f, -7f, 0f), Quaternion.identity);
 		Instantiate(wallPrefab, new Vector3(-20.0f, 10f, 0f), Quaternion.Euler(270, 0, 0));
 		Instantiate(wallPrefab, new Vector3(-20.0f, 35f, 0f), Quaternion.Euler(270, 0, 0));
 		Instantiate(wallPrefab, new Vector3(-20.0f, 60f, 0f), Quaternion.Euler(270, 0, 0));
