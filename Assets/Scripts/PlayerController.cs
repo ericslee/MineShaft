@@ -46,6 +46,9 @@ public class PlayerController : MonoBehaviour
 
 	bool m_isActive;
 
+	int numFrameFloating;
+	bool platformChanged;
+
     // Use this for initialization
     void Start()
     {
@@ -70,6 +73,9 @@ public class PlayerController : MonoBehaviour
 
         invincibilityFrames = 0;
 
+		numFrameFloating = -1;
+		platformChanged = false;
+
         // do not allow collisions between reticle and certain objects that should be not be selectable for gravity center effects
         Physics.IgnoreLayerCollision(8, 9, true);
 
@@ -87,6 +93,7 @@ public class PlayerController : MonoBehaviour
 		}
 
         invincibilityFrames++;
+		numFrameFloating -= 1;
     }
 
     void HandleInput()
@@ -160,7 +167,7 @@ public class PlayerController : MonoBehaviour
         }
         
         // Jump
-        if (IsGrounded())
+        if (IsGrounded() || numFrameFloating > 0)
         {
             Quaternion rotation = transform.rotation;
             transform.rotation = Quaternion.identity;
@@ -170,9 +177,18 @@ public class PlayerController : MonoBehaviour
                 animation.Play("jump");
                 rigidbody.velocity = new Vector3(0, jumpHeight, 0);
                 jumpSource.Play();
+				numFrameFloating = -1;
             }
             transform.rotation = rotation;
         }
+
+		if (numFrameFloating > 0 && platformChanged){
+			rigidbody.useGravity = false;
+		}
+		else{
+			rigidbody.useGravity = true;
+			platformChanged = false;
+		}
 
         // FOR DEBUGGING, multi jump
         if (Input.GetKey(KeyCode.U))
@@ -258,6 +274,7 @@ public class PlayerController : MonoBehaviour
                     if (currentActivePlatform)
                     {
                         Destroy(currentActivePlatform);
+						platformChanged = true;
                     }
                     
                     Vector3 platformPosition = targetingReticle.transform.position;
@@ -325,6 +342,9 @@ public class PlayerController : MonoBehaviour
 
             takeDamageSource.Play();
         }
+		else if (collision.gameObject.tag.Equals("PlayerPlatform") && IsGrounded()){
+			numFrameFloating = 90;
+		}
     }
 
     void OnCollisionExit()
