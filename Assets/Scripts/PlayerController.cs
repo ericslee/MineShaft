@@ -24,6 +24,7 @@ public class PlayerController : MonoBehaviour
     // Gun controls
     GameObject targetingReticle;
     Object targetingReticlePrefab;
+    ReticleScript reticleScript;
 
     // Gun state
     GunType currentGun;
@@ -85,6 +86,7 @@ public class PlayerController : MonoBehaviour
         // instantiate recticle
         Vector3 reticlePosition = new Vector3(transform.position.x + 4f, transform.position.y + 3, transform.position.z);   
         targetingReticle = (GameObject)Instantiate(targetingReticlePrefab, reticlePosition, Quaternion.Euler(90, 0, 0));
+        reticleScript = targetingReticle.GetComponent<ReticleScript>();
     }
 
     void Update()
@@ -210,6 +212,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.LeftShift)) 
         {
             currentGun = currentGun.Equals(GunType.PlatformGun) ? GunType.GravityGun : GunType.PlatformGun;
+            reticleScript.ChangeGun();
 
             // disable gravity center if switching to platform gun
             if (currentActiveGravityCenter)

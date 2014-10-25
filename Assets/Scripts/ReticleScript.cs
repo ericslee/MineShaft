@@ -12,6 +12,12 @@ public class ReticleScript : MonoBehaviour
 
 	public float range;
 
+    // Appearance
+    private Color platformGunColor = new Color(0.278f, 1, 0.969f);
+    private Color gravityGunColor = new Color(0.447f, 0, 1);
+    private Material platformReticleMaterial;
+    private Material gravityReticleMaterial;
+
     // Use this for initialization
     void Start()
     {
@@ -24,8 +30,10 @@ public class ReticleScript : MonoBehaviour
 
         // cache references
 		gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        platformReticleMaterial = (Material)Resources.Load("Materials/Materials/Reticle");
+        gravityReticleMaterial = (Material)Resources.Load("Materials/Materials/ReticleGravity");
     }
-    
+
     // Update is called once per frame
     void Update()
     {
@@ -52,6 +60,22 @@ public class ReticleScript : MonoBehaviour
         {
 			//check if other is within the gravity's pull
 			//gameManager.GetActivePlayer().AddToGravityList(other.gameObject);
+        }
+    }
+
+    public void ChangeGun()
+    {
+        Light[] lights = gameObject.GetComponentsInChildren<Light> ();
+        childLight = lights[0];
+        if (gameManager.GetActivePlayer().GetGunType().Equals(GunType.GravityGun))
+        {
+            childLight.color = gravityGunColor;
+            gameObject.renderer.material = gravityReticleMaterial;
+        } 
+        else
+        {
+            childLight.color = platformGunColor;
+            gameObject.renderer.material = platformReticleMaterial;
         }
     }
 }
