@@ -49,6 +49,9 @@ public class PlayerController : MonoBehaviour
 	int numFrameFloating;
 	bool platformChanged;
 
+	public int numFrameFloatingExposed;
+	public float minTargetingHeight, maxTargetingHeight, targetingWidth;
+
     // Use this for initialization
     void Start()
     {
@@ -232,8 +235,8 @@ public class PlayerController : MonoBehaviour
                 newReticlePos.y = -2f;
 
 			float heightBase = transform.position.y+transform.localScale.y;
-			float maxWidth = 7.5f;
-			float minHeight = 0, maxHeight = 0.5f;
+			float maxWidth = targetingWidth;
+			float minHeight = minTargetingHeight, maxHeight = maxTargetingHeight;
 
 			float minX = -1000, maxX = 1000;
 			if (transform.rotation == rightRotation){
@@ -343,7 +346,7 @@ public class PlayerController : MonoBehaviour
             takeDamageSource.Play();
         }
 		else if (collision.gameObject.tag.Equals("PlayerPlatform") && IsGrounded()){
-			numFrameFloating = 90;
+			numFrameFloating = numFrameFloatingExposed;
 		}
     }
 
