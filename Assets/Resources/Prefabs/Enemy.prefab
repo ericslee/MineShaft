@@ -30,6 +30,7 @@ GameObject:
   - 136: {fileID: 13600000}
   - 23: {fileID: 2300000}
   - 54: {fileID: 5400000}
+  - 114: {fileID: 11400002}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -115,6 +116,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae32c8eb55b2f1a4cbcef7397a2292bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &11400002
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b49246a4e893c104986da1e0f8ce79ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemySpeed: .0500000007
 --- !u!136 &13600000
 CapsuleCollider:
   m_ObjectHideFlags: 1
@@ -145,7 +158,7 @@ ParticleSystem:
   InitialModule:
     enabled: 1
     startLifetime:
-      scalar: 1
+      scalar: .100000001
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -380,7 +393,7 @@ ParticleSystem:
     enabled: 1
     m_Type: 0
     rate:
-      scalar: 50
+      scalar: 150
       maxCurve:
         serializedVersion: 2
         m_Curve:
