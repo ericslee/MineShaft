@@ -306,7 +306,6 @@ public class GameManager : MonoBehaviour
 		SpawnPlatform(new Vector3(5.75f, 144f, 0f));
 		SpawnPlatform(new Vector3(9f, 144f, 0f));
 		///////////////////// Cage 5 ///////////////////////////
-		SpawnPlatform(new Vector3(-3.5f, 150f, 0f));
 	}
 	
 	void SpawnLevelTriggers(){
@@ -344,8 +343,8 @@ public class GameManager : MonoBehaviour
 		levelTriggers[7].GetComponent<LevelControl>().SetCameraPosition(new Vector3(0f, 134f, -30f));
 
 		///////////////////// Winning trigger /////////////////////
-		levelTriggers.Add((GameObject)Instantiate(newLevelTriggerPrefab, new Vector3(-41f, 128f, 0f), Quaternion.identity));
-		levelTriggers.Add((GameObject)Instantiate(newLevelTriggerPrefab, new Vector3(41f, 128f, 0f), Quaternion.identity));
+		levelTriggers.Add((GameObject)Instantiate(newLevelTriggerPrefab, new Vector3(-41f, 148f, 0f), Quaternion.identity));
+		levelTriggers.Add((GameObject)Instantiate(newLevelTriggerPrefab, new Vector3(41f, 148f, 0f), Quaternion.identity));
 		levelTriggers[8].GetComponent<LevelControl>().SetIsWinningTrigger(true);
 		levelTriggers[9].GetComponent<LevelControl>().SetIsWinningTrigger(true);
 	}
