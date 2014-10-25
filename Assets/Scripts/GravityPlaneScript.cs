@@ -17,7 +17,7 @@ public class GravityPlaneScript : MonoBehaviour {
 
 	void OnTriggerEnter(Collider other)
 	{
-		if (other.gameObject.tag == "Platform"){
+		if (other.gameObject.tag == "Platform" || other.gameObject.tag == "PlayerPlatform"){
 			gameManager.GetActivePlayer().AddToGravityList(other.gameObject);
 		}
 	}
