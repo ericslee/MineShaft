@@ -343,8 +343,8 @@ public class GameManager : MonoBehaviour
 		levelTriggers[7].GetComponent<LevelControl>().SetCameraPosition(new Vector3(0f, 134f, -30f));
 
 		///////////////////// Winning trigger /////////////////////
-		levelTriggers.Add((GameObject)Instantiate(newLevelTriggerPrefab, new Vector3(-41f, 148f, 0f), Quaternion.identity));
-		levelTriggers.Add((GameObject)Instantiate(newLevelTriggerPrefab, new Vector3(41f, 148f, 0f), Quaternion.identity));
+		levelTriggers.Add((GameObject)Instantiate(newLevelTriggerPrefab, new Vector3(5f, 146f, 0f), Quaternion.identity));
+		levelTriggers.Add((GameObject)Instantiate(newLevelTriggerPrefab, new Vector3(5f, 150f, 0f), Quaternion.identity));
 		levelTriggers[8].GetComponent<LevelControl>().SetIsWinningTrigger(true);
 		levelTriggers[9].GetComponent<LevelControl>().SetIsWinningTrigger(true);
 	}
