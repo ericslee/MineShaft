@@ -17,7 +17,6 @@ public class PlayerController : MonoBehaviour
 	//Sound
     AudioSource jumpSource;
     AudioSource takeDamageSource;
-	public AudioClip hitAlien;
 
     // Controls
     float distToGround;

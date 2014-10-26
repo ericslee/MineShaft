@@ -305,7 +305,6 @@ public class GameManager : MonoBehaviour
 		SpawnPlatform(new Vector3(1.5f, 144f, 0f));
 		SpawnPlatform(new Vector3(5.75f, 144f, 0f));
 		SpawnPlatform(new Vector3(9f, 144f, 0f));
-		///////////////////// Cage 5 ///////////////////////////
 	}
 	
 	void SpawnLevelTriggers(){
@@ -335,8 +334,8 @@ public class GameManager : MonoBehaviour
 		levelTriggers[5].GetComponent<LevelControl>().SetCameraPosition(new Vector3(0f, 104f, -30f));
 		
 		//Level 4 to Level 5
-		levelTriggers.Add((GameObject)Instantiate(newLevelTriggerPrefab, new Vector3(5f, 118f, 0f), Quaternion.identity));
-		levelTriggers.Add((GameObject)Instantiate(newLevelTriggerPrefab, new Vector3(5f, 122f, 0f), Quaternion.identity));
+		levelTriggers.Add((GameObject)Instantiate(newLevelTriggerPrefab, new Vector3(5f, 116f, 0f), Quaternion.identity));
+		levelTriggers.Add((GameObject)Instantiate(newLevelTriggerPrefab, new Vector3(5f, 120f, 0f), Quaternion.identity));
 		levelTriggers[6].GetComponent<LevelControl>().SetCorrespondingLevel(4);
 		levelTriggers[6].GetComponent<LevelControl>().SetCameraPosition(new Vector3(0f, 104f, -30f));
 		levelTriggers[7].GetComponent<LevelControl>().SetCorrespondingLevel(5);
@@ -446,11 +445,24 @@ public class GameManager : MonoBehaviour
 		Instantiate(debris1Prefab, new Vector3(11.0f, 117.0f, 0f), Quaternion.Euler(0,0,90));
 	}
 
+	void spawnLevel5Barrier() {
+		///////////////////// Barrier Between Levels 4 and 5 ////////////////////
+		Instantiate(debris1Prefab, new Vector3(-7.0f, 148.0f, 0f), Quaternion.Euler(0,0,90));
+		Instantiate(debris1Prefab, new Vector3(-3.0f, 148.0f, 0f), Quaternion.Euler(0,0,90));
+		Instantiate(debris1Prefab, new Vector3(1.0f, 148.0f, 0f), Quaternion.Euler(0,0,90));
+		Instantiate(debris1Prefab, new Vector3(5.0f, 148.0f, 0f), Quaternion.Euler(0,0,90));
+		Instantiate(debris1Prefab, new Vector3(9.0f, 148.0f, 0f), Quaternion.Euler(0,0,90));
+		Instantiate(debris1Prefab, new Vector3(11.0f, 148.0f, 0f), Quaternion.Euler(0,0,90));
+	}
+
     public void Win()
     {
         // winning sequence
         if (hud != null) 
         {
+			//animation.Play("jump");
+			//animation.Play("jump");
+
             hud.Win();
         }
     }
