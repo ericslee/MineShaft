@@ -1085,7 +1085,7 @@ GameObject:
   - 114: {fileID: 11400000}
   - 108: {fileID: 10800000}
   - 82: {fileID: 8200000}
-  - 82: {fileID: 8200002}
+  - 82: {fileID: 8200004}
   m_Layer: 0
   m_Name: PlatformMiner
   m_TagString: Player
@@ -2140,7 +2140,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
---- !u!82 &8200002
+--- !u!82 &8200004
 AudioSource:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -2148,7 +2148,7 @@ AudioSource:
   m_GameObject: {fileID: 100142}
   m_Enabled: 1
   serializedVersion: 3
-  m_audioClip: {fileID: 8300000, guid: d8a5303958e7ff047b667ad86b85f5a2, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 6a385c657eb36934382a4b34c0728e4f, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -2212,6 +2212,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!108 &10800000
 Light:
   m_ObjectHideFlags: 1
@@ -2277,6 +2278,7 @@ MonoBehaviour:
   jumpHeight: 11
   health: 100
   invincibilityFrames: 0
+  hitAlien: {fileID: 0}
   numFrameFloatingExposed: 150
   minTargetingHeight: 0
   maxTargetingHeight: .5

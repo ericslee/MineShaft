@@ -5,6 +5,8 @@ public class FogScript : MonoBehaviour {
 
 	GameManager gameManager;
 
+	public AudioClip hitSmoke; 
+
 	// Use this for initialization
 	void Start () {
 		gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
@@ -18,6 +20,7 @@ public class FogScript : MonoBehaviour {
 		if (other.tag == "Player"){
 			PlayerController pc = gameManager.GetActivePlayer();
 			pc.setHealth(pc.getHealth()-1);
+			AudioSource.PlayClipAtPoint(hitSmoke, transform.position);
 		}
 	}
 }

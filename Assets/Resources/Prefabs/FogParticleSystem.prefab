@@ -41,6 +41,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae32c8eb55b2f1a4cbcef7397a2292bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitSmoke: {fileID: 8300000, guid: 6a385c657eb36934382a4b34c0728e4f, type: 3}
 --- !u!198 &19800000
 ParticleSystem:
   m_ObjectHideFlags: 1

@@ -161,6 +161,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ea6eb14746973c4487f5cbdbdddc7b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  jumpHeight: 0
+  health: 0
+  invincibilityFrames: 0
+  hitAlien: {fileID: 8300000, guid: 6a385c657eb36934382a4b34c0728e4f, type: 3}
+  numFrameFloatingExposed: 0
+  minTargetingHeight: 0
+  maxTargetingHeight: 0
+  targetingWidth: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

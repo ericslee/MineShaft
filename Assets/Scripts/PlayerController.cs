@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
 {
 	//Pause Menu
 	bool pause = false;
+	Rect PMenu = new Rect(425, 200, 200, 100);
 
 	public float jumpHeight;
 	public int health;
@@ -16,6 +17,7 @@ public class PlayerController : MonoBehaviour
 	//Sound
     AudioSource jumpSource;
     AudioSource takeDamageSource;
+	public AudioClip hitAlien;
 
     // Controls
     float distToGround;
@@ -113,33 +115,12 @@ public class PlayerController : MonoBehaviour
 			Application.Quit();
 			Debug.Log ("Application.Quit() only works in build, not in editor"); 
 		}
-		if (Input.GetKey(KeyCode.P)){//Input.GetKey ("p") || Input.GetKey("P")) {
+		if (Input.GetKey(KeyCode.P)){
 			pause = !pause;
-			//Application.Quit();
 		}
 		if (pause) {
 			Time.timeScale = 0;
-			GUI.Box(new Rect(425, 150, 175, 425),"Paused");
-			//GUILayout.BeginArea(new Rect(425, 150, 175, 425));
-			
-			if (GUILayout.Button("Resume Game")) 
-			{ 
-				pause = false;
-			}
-			
-			if (GUILayout.Button("New Game")) 
-			{ 
-				Application.LoadLevel("Mine"); 
-			}
-					
-			if (GUILayout.Button("Exit")) 
-			{ 
-				Application.Quit(); 
-				Debug.Log ("Application.Quit() only works in build, not in editor"); 
-			}
-			//GUILayout.EndArea(); 
-		}
-		if(!pause) {
+		} else {
 			Time.timeScale = 1;
 		}
 	}
@@ -395,4 +376,32 @@ public class PlayerController : MonoBehaviour
 	public float GetGravityRange(){
 		return gravityRange;
 	}
+
+	public void OnGUI()
+	{
+		if (pause) {
+			GUI.Window (0, PMenu, PauseMenu, "Pause Menu");
+		}
+	}
+	
+	void PauseMenu (int windowID) {
+		print("Got a click in window " + windowID);
+		if (GUILayout.Button("Resume Game")) 
+		{ 
+			pause = false;
+			Time.timeScale = 1;
+		}
+		
+		if (GUILayout.Button("New Game")) 
+		{ 
+			Application.LoadLevel("Mine"); 
+		}
+		
+		if (GUILayout.Button("Exit")) 
+		{ 
+			Application.Quit(); 
+			Debug.Log ("Application.Quit() only works in build, not in editor"); 
+		}
+	}
+
 }

@@ -16,35 +16,2183 @@ Platform assembly: C:\Users\Samantha\Documents\GitHub\MineShaft\MineShaft3_Data\
 Loading C:\Users\Samantha\Documents\GitHub\MineShaft\MineShaft3_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
 Platform assembly: C:\Users\Samantha\Documents\GitHub\MineShaft\MineShaft3_Data\Managed\Assembly-CSharp.dll (this message is harmless)
 Loading C:\Users\Samantha\Documents\GitHub\MineShaft\MineShaft3_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
-- Completed reload, in  0.043 seconds
+- Completed reload, in  0.046 seconds
 desktop: 3200x1800 60Hz; virtual: 3200x1800 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 Platform assembly: C:\Users\Samantha\Documents\GitHub\MineShaft\MineShaft3_Data\Managed\System.Core.dll (this message is harmless)
-UnloadTime: 0.367625 ms
+UnloadTime: 0.309776 ms
 Unloading 4 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
 
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 113.
-Total: 0.759978 ms (FindLiveObjects: 0.013062 ms CreateObjectMapping: 0.009330 ms MarkObjects: 0.116632 ms  DeleteObjects: 0.019127 ms)
-
-UnloadTime: 0.337301 ms
-Unloading 2 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
-
-Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 114.
-Total: 0.655941 ms (FindLiveObjects: 0.006531 ms CreateObjectMapping: 0.008864 ms MarkObjects: 0.106835 ms  DeleteObjects: 0.016328 ms)
-
-UnloadTime: 0.316774 ms
-Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
-
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 111.
-Total: 0.642412 ms (FindLiveObjects: 0.006997 ms CreateObjectMapping: 0.008397 ms MarkObjects: 0.115699 ms  DeleteObjects: 0.023793 ms)
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 109.
+Total: 0.617686 ms (FindLiveObjects: 0.006997 ms CreateObjectMapping: 0.007931 ms MarkObjects: 0.098437 ms  DeleteObjects: 0.021926 ms)
 
 NullReferenceException: Object reference not set to an instance of an object
   at ReticleScript.OnTriggerEnter (UnityEngine.Collider other) [0x00000] in <filename unknown>:0 
  
 (Filename:  Line: -1)
 
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
 Application.Quit() only works in build, not in editor
  
 (Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+ArgumentException: You can only call GUI functions from inside OnGUI.
+  at UnityEngine.GUIUtility.CheckOnGUI () [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, UnityEngine.GUIContent content, UnityEngine.GUIStyle style) [0x00000] in <filename unknown>:0 
+  at UnityEngine.GUI.Box (Rect position, System.String text) [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleMisc () [0x00000] in <filename unknown>:0 
+  at PlayerController.HandleInput () [0x00000] in <filename unknown>:0 
+  at PlayerController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
 
