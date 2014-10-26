@@ -55,12 +55,12 @@ public class GameHUD : MonoBehaviour
     void OnGUI()
     {
 
-        GUI.Label(new Rect(10, 5, Screen.width / 5, Screen.height / 25), "Current Level: " + gameManager.GetCurrentLevel());
+        GUI.Label(new Rect(50, 15, Screen.width / 5, Screen.height / 25), "Current Level: " + gameManager.GetCurrentLevel());
 
 		
-		GUI.Label(new Rect(10, 40, Screen.width / 5, Screen.height / 25), "Gun: " + gameManager.GetActivePlayer().GetGunType());
+		GUI.Label(new Rect(50, 50, Screen.width / 5, Screen.height / 25), "Gun: " + gameManager.GetActivePlayer().GetGunType());
 		// Instructions
-        GUI.Label (new Rect (10, 75, Screen.width / 5, Screen.height / 2 + 10), 
+        GUI.Label (new Rect (50, 85, Screen.width / 5, Screen.height / 2 + 10), 
 		    /*"Controls - \nA+D or Left+right arrows: movement" +
             "\n\nSpace: jump" +
             "\n\nLeft-shift: Switch gun" +
@@ -69,9 +69,9 @@ public class GameHUD : MonoBehaviour
             "\n\nU: fly in DEBUG" +*/ 
 		          "Health: " + gameManager.GetActivePlayer ().getHealth ());
 		//		GUI.skin.horizontalSlider = red;
-		Texture2D tex = createTex( Screen.width / 5, Screen.height / 2 + 10, gameManager.GetActivePlayer().getHealth());
+		Texture2D tex = createTex( Screen.width / 6, Screen.height / 2 + 10, gameManager.GetActivePlayer().getHealth());
 		GUI.skin.horizontalSlider.normal.background = tex;
-		GUI.HorizontalSlider (new Rect(10, 95, Screen.width / 5, Screen.height / 2 + 10),gameManager.GetActivePlayer().getHealth(), 0, 100);
+		GUI.HorizontalSlider (new Rect(50, 105, Screen.width / 6, Screen.height / 2 + 10),gameManager.GetActivePlayer().getHealth(), 0, 100);
         // Win/loss
         if (hasPlayerWon)
 		{
