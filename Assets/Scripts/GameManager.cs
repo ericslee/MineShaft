@@ -221,27 +221,27 @@ public class GameManager : MonoBehaviour
 	void SpawnLevel4(){
 		///////////////////// Fourth level /////////////////////
 		///////////////////// Row 1 ////////////////////////////
-		SpawnPlatform(new Vector3(9f, 90f, 0f));
-		SpawnPlatform(new Vector3(4.75f, 90f, 0f));
-		SpawnPlatform(new Vector3(1.5f, 90f, 0f));
-		SpawnPlatform(new Vector3(-2.5f, 90f, 0f));
-		SpawnPlatform(new Vector3(-5.75f, 90f, 0f));
-		SpawnPlatform(new Vector3(-10.25f, 90f, 0f));
+		SpawnPlatform(new Vector3(9f, 91f, 0f));
+		SpawnPlatform(new Vector3(4.75f, 91f, 0f));
+		SpawnPlatform(new Vector3(1.5f, 91f, 0f));
+		SpawnPlatform(new Vector3(-2.5f, 91f, 0f));
+		SpawnPlatform(new Vector3(-5.75f, 91f, 0f));
+		SpawnPlatform(new Vector3(-9f, 91f, 0f));
 		///////////////////// Row 2 ////////////////////////////
-		SpawnPlatform(new Vector3(-9.5f, 92f, 0f));
-		SpawnPlatform(new Vector3(-6.25f, 92f, 0f));
-		SpawnPlatform(new Vector3(-3f, 92f, 0f));
-		SpawnPlatform(new Vector3(-2f, 92f, 0f));
-		SpawnPlatform(new Vector3(2.5f, 92f, 0f));
-		SpawnPlatform(new Vector3(5.75f, 92f, 0f));
-		SpawnPlatform(new Vector3(9f, 92f, 0f));
+		SpawnPlatform(new Vector3(-9.5f, 93f, 0f));
+		SpawnPlatform(new Vector3(-6.25f, 93f, 0f));
+		SpawnPlatform(new Vector3(-3f, 93f, 0f));
+		SpawnPlatform(new Vector3(-2f, 93f, 0f));
+		SpawnPlatform(new Vector3(2.5f, 93f, 0f));
+		SpawnPlatform(new Vector3(5.75f, 93f, 0f));
+		SpawnPlatform(new Vector3(9f, 93f, 0f));
 		///////////////////// Row 3 ////////////////////////////
-		SpawnPlatform(new Vector3(-9.5f, 94f, 0f));
-		SpawnPlatform(new Vector3(-5f, 94f, 0f));
-		SpawnPlatform(new Vector3(-1.75f, 94f, 0f));
-		SpawnPlatform(new Vector3(1.5f, 94f, 0f));
-		SpawnPlatform(new Vector3(5.75f, 94f, 0f));
-		SpawnPlatform(new Vector3(9f, 94f, 0f));
+		SpawnPlatform(new Vector3(-9.5f, 95f, 0f));
+		SpawnPlatform(new Vector3(-5f, 95f, 0f));
+		SpawnPlatform(new Vector3(-1.75f, 95f, 0f));
+		SpawnPlatform(new Vector3(1.5f, 95f, 0f));
+		SpawnPlatform(new Vector3(5.75f, 95f, 0f));
+		SpawnPlatform(new Vector3(9f, 95f, 0f));
 		///////////////////// Row 4 ////////////////////////////
 		SpawnPlatform(new Vector3(9f, 120f, 0f));
 	}
@@ -390,12 +390,61 @@ public class GameManager : MonoBehaviour
         // move camera
         iTween.MoveTo(Camera.main.gameObject, cameraPos, 1.0f);
 		//spawn a new fog thing!
-		if (level == 2 && !hasSpawnedFog[level-1]) Instantiate(fogPrefab, new Vector3(10.0f, 35.0f, 0f), Quaternion.identity);
-		else if (level == 3 && !hasSpawnedFog[level-1]) Instantiate(fogPrefab, new Vector3(-10.0f, 35.0f, 0f), Quaternion.identity);
-		else if (level == 4 && !hasSpawnedFog[level-1]) Instantiate(fogPrefab, new Vector3(10.0f, 90.0f, 0f), Quaternion.identity);
-		else if (level == 5 && !hasSpawnedFog[level-1]) Instantiate(fogPrefab, new Vector3(0.0f, 120.0f, 0f), Quaternion.identity);
+		if (level == 2 && !hasSpawnedFog [level - 1]) {
+			Instantiate (fogPrefab, new Vector3 (10.0f, 35.0f, 0f), Quaternion.identity);
+			spawnLevel1Barrier();
+		} else if (level == 3 && !hasSpawnedFog[level-1]) {
+			Instantiate(fogPrefab, new Vector3(-10.0f, 35.0f, 0f), Quaternion.identity);
+			spawnLevel2Barrier();
+		} else if (level == 4 && !hasSpawnedFog[level-1]) {
+			Instantiate(fogPrefab, new Vector3(10.0f, 90.0f, 0f), Quaternion.identity);
+			spawnLevel3Barrier();
+		} else if (level == 5 && !hasSpawnedFog[level-1]) {
+			Instantiate(fogPrefab, new Vector3(0.0f, 120.0f, 0f), Quaternion.identity);
+			spawnLevel4Barrier();
+		}
 		hasSpawnedFog[level-1] = true;
     }
+
+	void spawnLevel1Barrier() {
+		///////////////////// Barrier Between Levels 1 and 2 ////////////////////
+		Instantiate(debris1Prefab, new Vector3(-7.0f, 25.0f, 0f), Quaternion.Euler(0,0,90));
+		Instantiate(debris1Prefab, new Vector3(-3.0f, 25.0f, 0f), Quaternion.Euler(0,0,90));
+		Instantiate(debris1Prefab, new Vector3(1.0f, 25.0f, 0f), Quaternion.Euler(0,0,90));
+		Instantiate(debris1Prefab, new Vector3(5.0f, 25.0f, 0f), Quaternion.Euler(0,0,90));
+		Instantiate(debris1Prefab, new Vector3(9.0f, 25.0f, 0f), Quaternion.Euler(0,0,90));
+		Instantiate(debris1Prefab, new Vector3(11.0f, 25.0f, 0f), Quaternion.Euler(0,0,90));
+	}
+
+	void spawnLevel2Barrier() {
+		///////////////////// Barrier Between Levels 2 and 3 ////////////////////
+		Instantiate(debris1Prefab, new Vector3(-7.0f, 55.0f, 0f), Quaternion.Euler(0,0,90));
+		Instantiate(debris1Prefab, new Vector3(-3.0f, 55.0f, 0f), Quaternion.Euler(0,0,90));
+		Instantiate(debris1Prefab, new Vector3(1.0f, 55.0f, 0f), Quaternion.Euler(0,0,90));
+		Instantiate(debris1Prefab, new Vector3(5.0f, 55.0f, 0f), Quaternion.Euler(0,0,90));
+		Instantiate(debris1Prefab, new Vector3(9.0f, 55.0f, 0f), Quaternion.Euler(0,0,90));
+		Instantiate(debris1Prefab, new Vector3(11.0f, 55.0f, 0f), Quaternion.Euler(0,0,90));
+	}
+
+	void spawnLevel3Barrier() {
+		///////////////////// Barrier Between Levels 3 and 4 ////////////////////
+		Instantiate(debris1Prefab, new Vector3(-7.0f, 87.0f, 0f), Quaternion.Euler(0,0,90));
+		Instantiate(debris1Prefab, new Vector3(-3.0f, 87.0f, 0f), Quaternion.Euler(0,0,90));
+		Instantiate(debris1Prefab, new Vector3(1.0f, 87.0f, 0f), Quaternion.Euler(0,0,90));
+		Instantiate(debris1Prefab, new Vector3(5.0f, 87.0f, 0f), Quaternion.Euler(0,0,90));
+		Instantiate(debris1Prefab, new Vector3(9.0f, 87.0f, 0f), Quaternion.Euler(0,0,90));
+		Instantiate(debris1Prefab, new Vector3(11.0f, 87.0f, 0f), Quaternion.Euler(0,0,90));
+	}
+
+	void spawnLevel4Barrier() {
+		///////////////////// Barrier Between Levels 4 and 5 ////////////////////
+		Instantiate(debris1Prefab, new Vector3(-7.0f, 117.0f, 0f), Quaternion.Euler(0,0,90));
+		Instantiate(debris1Prefab, new Vector3(-3.0f, 117.0f, 0f), Quaternion.Euler(0,0,90));
+		Instantiate(debris1Prefab, new Vector3(1.0f, 117.0f, 0f), Quaternion.Euler(0,0,90));
+		Instantiate(debris1Prefab, new Vector3(5.0f, 117.0f, 0f), Quaternion.Euler(0,0,90));
+		Instantiate(debris1Prefab, new Vector3(9.0f, 117.0f, 0f), Quaternion.Euler(0,0,90));
+		Instantiate(debris1Prefab, new Vector3(11.0f, 117.0f, 0f), Quaternion.Euler(0,0,90));
+	}
 
     public void Win()
     {
