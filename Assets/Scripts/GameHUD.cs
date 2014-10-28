@@ -69,7 +69,7 @@ public class GameHUD : MonoBehaviour
 		
 		GUI.Label(new Rect(50, 50, Screen.width / 5, Screen.height / 25), "Gun: " + gameManager.GetActivePlayer().GetGunType());
         GUI.Label (new Rect (50, 85, Screen.width / 5, Screen.height / 2 + 10), 
-		          "Health: " + gameManager.GetActivePlayer ().getHealth ());
+		          "Health: " + gameManager.GetActivePlayer().getHealth());
 
         // Health bar
         if (currHealthMeterValue != gameManager.GetActivePlayer().getHealth() && gameManager.GetActivePlayer().getHealth() > 0)
@@ -80,6 +80,9 @@ public class GameHUD : MonoBehaviour
         GUI.skin.horizontalSlider.normal.background = tex;
 		GUI.HorizontalSlider (new Rect(50, 105, Screen.width / 6, Screen.height / 2 + 10), gameManager.GetActivePlayer().getHealth(), 0, 100);
 
+        // Score
+        GUI.Label (new Rect (5 * (Screen.width / 6), Screen.height / 8, Screen.width / 5 , Screen.height / 2 + 10), 
+                   "Score: " + gameManager.GetCurrentScore());
         // Win/loss
         if (hasPlayerWon)
 		{

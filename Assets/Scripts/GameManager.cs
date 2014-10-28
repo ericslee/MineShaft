@@ -386,6 +386,9 @@ public class GameManager : MonoBehaviour
 		}
 
         if (GetActivePlayer().getHealth() <= 0) Lose();
+
+        int playerHeight = (int)(GetActivePlayer().transform.position.y * 100);
+        if (playerHeight > currentScore) currentScore = playerHeight;
     }
 
     public void ChangeLevel(int level, Vector3 cameraPos) 
@@ -492,4 +495,9 @@ public class GameManager : MonoBehaviour
 		if (activePlayer == 0) return playerController;
 		else return player2Controller;
 	}
+
+    public int GetCurrentScore()
+    {
+        return currentScore;
+    }
 }
