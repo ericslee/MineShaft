@@ -126,6 +126,18 @@ public class PlayerController : MonoBehaviour
 
     void HandleMovement()
     {
+        // change character direction if necessary
+        Vector3 pos = Input.mousePosition;
+        pos.z = transform.position.z - Camera.main.transform.position.z;
+        if (transform.rotation != rightRotation && Camera.main.ScreenToWorldPoint(pos).x > transform.position.x) 
+        {
+            transform.rotation = rightRotation;
+        }
+        else if (transform.rotation != leftRotation && Camera.main.ScreenToWorldPoint(pos).x < transform.position.x)
+        {
+            transform.rotation = leftRotation;
+        }
+
         if (!collidingWall)
         {
             if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
@@ -222,14 +234,8 @@ public class PlayerController : MonoBehaviour
 			float minHeight = minTargetingHeight, maxHeight = maxTargetingHeight;
 
 			float minX = -1000, maxX = 1000;
-			if (transform.rotation == rightRotation){
-				minX = transform.position.x;
-				maxX = transform.position.x + maxWidth;
-			}
-			else{
-				minX = transform.position.x - maxWidth;
-				maxX = transform.position.x;
-			}
+            minX = transform.position.x - maxWidth;
+            maxX = transform.position.x + maxWidth;
 
 			if (newReticlePos.x < minX){
 				newReticlePos.x = minX;
