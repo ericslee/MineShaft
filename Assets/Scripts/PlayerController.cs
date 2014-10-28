@@ -17,6 +17,8 @@ public class PlayerController : MonoBehaviour
 	//Sound
     AudioSource jumpSource;
     AudioSource takeDamageSource;
+    AudioSource platformGunFireSource;
+    AudioSource gravityGunFireSource;
 
     // Controls
     float distToGround;
@@ -66,6 +68,8 @@ public class PlayerController : MonoBehaviour
         // set up sounds
         jumpSource = GetComponents<AudioSource>()[0];
         takeDamageSource = GetComponents<AudioSource>()[1];
+        platformGunFireSource = GetComponents<AudioSource>()[2];
+        gravityGunFireSource = GetComponents<AudioSource>()[3];
 
         // get distance to ground
         distToGround = collider.bounds.extents.y;
@@ -262,6 +266,8 @@ public class PlayerController : MonoBehaviour
             {
                 if (currentGun.Equals(GunType.PlatformGun))
                 {
+                    if (platformGunFireSource) platformGunFireSource.Play();
+
                     // create platform at the location of the targeting reticle
                     if (currentActivePlatform)
                     {
@@ -289,6 +295,8 @@ public class PlayerController : MonoBehaviour
                 }
                 else if (currentGun.Equals(GunType.GravityGun))
                 {
+                    if (gravityGunFireSource) gravityGunFireSource.Play();
+
                     // update gravity center location
                     if (currentActiveGravityCenter) 
                     {
