@@ -122,7 +122,7 @@ public class GameManager : MonoBehaviour
 		Instantiate(backdropPrefab, new Vector3(0, 83, 2.5f), Quaternion.Euler(270, 0, 0));
 		Instantiate(backdropPrefab, new Vector3(0, 114, 2.5f), Quaternion.Euler(270, 0, 0));
 		Instantiate(backdropPrefab, new Vector3(0, 114, 2.5f), Quaternion.Euler(270, 0, 0));
-		Instantiate(backdropPrefab, new Vector3(0, 143, 2.5f), Quaternion.Euler(270, 0, 0));
+		Instantiate(backdropPrefab, new Vector3(0, 134, 2.4f), Quaternion.Euler(270, 0, 0));
 	}
 
 	void SpawnLevel1(){
@@ -342,8 +342,8 @@ public class GameManager : MonoBehaviour
 		levelTriggers[7].GetComponent<LevelControl>().SetCameraPosition(new Vector3(0f, 134f, -30f));
 
 		///////////////////// Winning trigger /////////////////////
-		levelTriggers.Add((GameObject)Instantiate(newLevelTriggerPrefab, new Vector3(5f, 148f, 0f), Quaternion.identity));
-		levelTriggers.Add((GameObject)Instantiate(newLevelTriggerPrefab, new Vector3(5f, 152f, 0f), Quaternion.identity));
+		levelTriggers.Add((GameObject)Instantiate(newLevelTriggerPrefab, new Vector3(-41f, 148f, 0f), Quaternion.identity));
+		levelTriggers.Add((GameObject)Instantiate(newLevelTriggerPrefab, new Vector3(41f, 148f, 0f), Quaternion.identity));
 		levelTriggers[8].GetComponent<LevelControl>().SetIsWinningTrigger(true);
 		levelTriggers[9].GetComponent<LevelControl>().SetIsWinningTrigger(true);
 	}
