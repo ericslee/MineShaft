@@ -18,9 +18,12 @@ public class FogScript : MonoBehaviour {
 
 	void OnParticleCollision(GameObject other) {
 		if (other.tag == "Player"){
-			PlayerController pc = gameManager.GetActivePlayer();
-			pc.setHealth(pc.getHealth()-1);
-			AudioSource.PlayClipAtPoint(hitSmoke, transform.position);
+			if (gameManager) 
+            {
+                PlayerController pc = gameManager.GetActivePlayer();
+			    pc.setHealth(pc.getHealth()-1);
+			    AudioSource.PlayClipAtPoint(hitSmoke, transform.position);
+            }
 		}
 	}
 }

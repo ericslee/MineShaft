@@ -99,7 +99,7 @@ public class PlayerController : MonoBehaviour
         if (m_isActive) HandleInput();
 
 		if (currentActiveGravityCenter){
-		gravityScript.SetGravityPlaneMax(gravityScript.GetAbsMaxScale() * ((float)health+10.0f)/100.0f);
+		    gravityScript.SetGravityPlaneMax(gravityScript.GetAbsMaxScale() * ((float)health+10.0f)/100.0f);
 		}
 
         invincibilityFrames++;
@@ -108,7 +108,7 @@ public class PlayerController : MonoBehaviour
 
     void HandleInput()
     {
-		HandleMisc ();
+		HandleMisc();
         HandleMovement();
         HandleGunControls(); 
     }

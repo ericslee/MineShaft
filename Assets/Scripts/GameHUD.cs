@@ -10,11 +10,17 @@ public class GameHUD : MonoBehaviour
     bool hasPlayerWon = false;
     bool hasPlayerLost = false;
 
+    Texture2D tex;
+    int currHealthMeterValue;
+
     // Use this for initialization
     void Start()
     {
         // cache references
         gameManager = GetComponent<GameManager>();
+
+        currHealthMeterValue = gameManager.GetActivePlayer().getHealth();
+        tex = createTex(Screen.width / 6, Screen.height / 2 + 10, gameManager.GetActivePlayer().getHealth());
     }
     
 	Texture2D createTex( int w, int h, float health)
@@ -38,10 +44,13 @@ public class GameHUD : MonoBehaviour
 				}
 			}
 		}
-		Texture2D tex = new Texture2D(w, h);
-		tex.SetPixels( ps );
-		tex.Apply();
-		return tex;
+		Texture2D texture = new Texture2D(w, h);
+		texture.SetPixels( ps );
+		texture.Apply();
+
+        Resources.UnloadUnusedAssets();
+
+        return texture;
 	}
 
     // Update is called once per frame
@@ -59,19 +68,17 @@ public class GameHUD : MonoBehaviour
 
 		
 		GUI.Label(new Rect(50, 50, Screen.width / 5, Screen.height / 25), "Gun: " + gameManager.GetActivePlayer().GetGunType());
-		// Instructions
         GUI.Label (new Rect (50, 85, Screen.width / 5, Screen.height / 2 + 10), 
-		    /*"Controls - \nA+D or Left+right arrows: movement" +
-            "\n\nSpace: jump" +
-            "\n\nLeft-shift: Switch gun" +
-            "\n\nMouse: aim" +
-            "\n\nClick: fire gun" +
-            "\n\nU: fly in DEBUG" +*/ 
 		          "Health: " + gameManager.GetActivePlayer ().getHealth ());
-		//		GUI.skin.horizontalSlider = red;
-		Texture2D tex = createTex( Screen.width / 6, Screen.height / 2 + 10, gameManager.GetActivePlayer().getHealth());
-		GUI.skin.horizontalSlider.normal.background = tex;
-		GUI.HorizontalSlider (new Rect(50, 105, Screen.width / 6, Screen.height / 2 + 10),gameManager.GetActivePlayer().getHealth(), 0, 100);
+
+        // Health bar
+        if (currHealthMeterValue != gameManager.GetActivePlayer().getHealth())
+        {
+		    tex = createTex(Screen.width / 6, Screen.height / 2 + 10, gameManager.GetActivePlayer().getHealth());
+        }
+        GUI.skin.horizontalSlider.normal.background = tex;
+		GUI.HorizontalSlider (new Rect(50, 105, Screen.width / 6, Screen.height / 2 + 10), gameManager.GetActivePlayer().getHealth(), 0, 100);
+
         // Win/loss
         if (hasPlayerWon)
 		{

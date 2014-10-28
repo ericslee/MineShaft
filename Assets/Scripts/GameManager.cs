@@ -21,6 +21,9 @@ public class GameManager : MonoBehaviour
     // list of level triggers, (level - 1 is the index)
     List<GameObject> levelTriggers = new List<GameObject>();
 
+    // Scoring
+    int currentScore;
+
     // Prefabs
     Object playerPrefab;
 	Object player2Prefab;
@@ -67,6 +70,7 @@ public class GameManager : MonoBehaviour
 		//player2Controller.setActive(false);
 
         currentLevel = 1;
+        currentScore = 0;
 
         SetUpLevel();
         AddEnemies();
@@ -380,6 +384,8 @@ public class GameManager : MonoBehaviour
 		{
 			GetActivePlayer().setHealth(playerController.getHealth()+1);
 		}
+
+        if (GetActivePlayer().getHealth() <= 0) Lose();
     }
 
     public void ChangeLevel(int level, Vector3 cameraPos) 
