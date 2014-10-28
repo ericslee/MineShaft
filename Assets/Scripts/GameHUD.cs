@@ -72,9 +72,10 @@ public class GameHUD : MonoBehaviour
 		          "Health: " + gameManager.GetActivePlayer ().getHealth ());
 
         // Health bar
-        if (currHealthMeterValue != gameManager.GetActivePlayer().getHealth())
+        if (currHealthMeterValue != gameManager.GetActivePlayer().getHealth() && gameManager.GetActivePlayer().getHealth() > 0)
         {
 		    tex = createTex(Screen.width / 6, Screen.height / 2 + 10, gameManager.GetActivePlayer().getHealth());
+            currHealthMeterValue = gameManager.GetActivePlayer().getHealth();
         }
         GUI.skin.horizontalSlider.normal.background = tex;
 		GUI.HorizontalSlider (new Rect(50, 105, Screen.width / 6, Screen.height / 2 + 10), gameManager.GetActivePlayer().getHealth(), 0, 100);
