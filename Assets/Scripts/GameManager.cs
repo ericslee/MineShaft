@@ -371,6 +371,11 @@ public class GameManager : MonoBehaviour
     void AddEnemies()
     {
         Instantiate(enemyPrefab, new Vector3(9f, 10f, 0f), Quaternion.identity);
+        Instantiate(enemyPrefab, new Vector3(9f, 60f, 0f), Quaternion.identity);
+        Instantiate(enemyPrefab, new Vector3(-4f, 50f, 0f), Quaternion.identity);
+        Instantiate(enemyPrefab, new Vector3(-5.3f, 75f, 0f), Quaternion.identity);
+        Instantiate(enemyPrefab, new Vector3(9f, 100f, 0f), Quaternion.identity);
+        Instantiate(enemyPrefab, new Vector3(0f, 135f, 0f), Quaternion.identity);
     }
     
     // Update is called once per frame

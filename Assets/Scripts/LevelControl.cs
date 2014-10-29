@@ -28,7 +28,7 @@ public class LevelControl : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (correspondingLevel != gameManager.GetCurrentLevel() && other.tag.Equals("Player"))
+        if (gameManager && correspondingLevel != gameManager.GetCurrentLevel() && other.tag.Equals("Player"))
         {
             if (isWinningTrigger)
             {
